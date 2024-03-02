@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:singleLine="true"
+        android:layout_marginStart="@dimen/dim_5"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginEnd="@dimen/dim_5"
+        android:layout_marginBottom="@dimen/dim_5"
+        android:background="@drawable/bg_lucky_number"
+        android:fontFamily="@font/rubik_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/dim_8"
+        android:text="1"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

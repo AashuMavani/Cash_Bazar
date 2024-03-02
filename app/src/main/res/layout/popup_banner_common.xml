@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/dim_5"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:fontFamily="@font/rubik_medium"
+            android:includeFontPadding="false"
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_10"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="@color/black_font"
+            android:textSize="@dimen/textSize_14" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relPopup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_10"
+        android:padding="@dimen/dim_1"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/probrBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginEnd="@dimen/dim_10"
+            android:layout_marginBottom="@dimen/dim_10"
+            android:theme="@style/Progressbar.Green"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/ivLottieView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+        <ImageView
+            android:id="@+id/imgBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dim_10"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:fontFamily="@font/rubik_medium"
+            android:includeFontPadding="false"
+            android:id="@+id/txtDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="@color/black_font"
+            android:textSize="@dimen/textSize_13" />
+    </LinearLayout>
+</LinearLayout>

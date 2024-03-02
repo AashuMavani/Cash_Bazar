@@ -1,0 +1,29 @@
+//
+//pluginManagement {
+//    repositories {
+//        google()
+//        mavenCentral()
+//        gradlePluginPortal()
+//        jcenter()
+//        maven { url 'https://artifacts.applovin.com/android' }
+//    }
+//}
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositories {
+//        google()
+//        mavenCentral()
+//        jcenter()
+//        maven {
+//            url  "https://releases.adjoe.io/maven"
+//        }
+//        maven { url = uri("https://storage.googleapis.com/caterpillar-libs-bucket/") }
+//        maven { url 'https://maven.google.com/' }
+//        maven { url "https://jitpack.io" }
+//        maven { url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" }
+//        }
+//}
+//
+
+rootProject.name = "Cash Bazar"
+include ':app',':library',':Wheel'

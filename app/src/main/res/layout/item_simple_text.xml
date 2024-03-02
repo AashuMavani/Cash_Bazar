@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:fontFamily="@font/noto_regular"
+        android:includeFontPadding="false"
+        android:padding="@dimen/dim_10"
+        android:text="Earn upto 1000 points"
+        android:textAllCaps="false"
+        android:textColor="@color/black_font"
+        android:textSize="@dimen/textSize_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_0_7"
+        android:layout_marginLeft="@dimen/dim_10"
+        android:layout_marginRight="@dimen/dim_10"
+        android:background="@color/border_grey" />
+</LinearLayout>

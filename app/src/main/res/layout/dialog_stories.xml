@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.reward.cashbazar.customviews.storyview.utils.Pull_Dismiss_Layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pull_dismiss_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/storiesViewPager"
+            android:layout_width="0dp"
+            android:background="#707070"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <com.reward.cashbazar.customviews.storyview.progress.Stories_Progress_View
+            android:id="@+id/storiesProgressView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dim_5"
+            android:layout_marginStart="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginEnd="@dimen/dim_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginEnd="@dimen/dim_15"
+            android:background="@null"
+            android:src="@drawable/ic_close_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/storiesProgressView" />
+
+
+        <TextView
+            android:id="@+id/title_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_10"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/subtitle_textView"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton"
+            app:layout_constraintStart_toEndOf="@+id/titleCardView"
+            app:layout_constraintTop_toBottomOf="@+id/storiesProgressView"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Hamza Al-Omari 2h" />
+
+        <TextView
+            android:id="@+id/subtitle_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_10"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_12"
+            app:layout_constraintBottom_toBottomOf="@+id/titleCardView"
+            app:layout_constraintEnd_toEndOf="@+id/title_textView"
+            app:layout_constraintStart_toEndOf="@+id/titleCardView"
+            app:layout_constraintTop_toBottomOf="@+id/title_textView"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Berlin" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/titleCardView"
+            android:layout_width="@dimen/dim_50"
+            android:layout_height="@dimen/dim_50"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/dim_15"
+            android:layout_marginTop="@dimen/dim_10"
+            app:cardCornerRadius="@dimen/dim_25"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/storiesProgressView">
+
+            <ImageView
+                android:id="@+id/title_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside" />
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.reward.cashbazar.customviews.storyview.utils.Pull_Dismiss_Layout>

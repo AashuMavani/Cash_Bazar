@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+<!--    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginRight="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dim_10"
+        app:cardElevation="@dimen/dim_3">-->
+
+        <RelativeLayout
+            android:id="@+id/relTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_border"
+            android:layout_marginLeft="@dimen/dim_15"
+            android:layout_marginTop="@dimen/dim_5"
+            android:layout_marginRight="@dimen/dim_15"
+            android:layout_marginBottom="@dimen/dim_10">
+
+            <LinearLayout
+                android:id="@+id/relTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim_10">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardIcon"
+                    android:layout_width="@dimen/dim_50"
+                    android:layout_height="@dimen/dim_50"
+                    android:layout_gravity="center_vertical"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/dim_10"
+                    app:cardElevation="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ProgressBar
+                            android:id="@+id/probr"
+                            android:layout_width="@dimen/dim_25"
+                            android:layout_height="@dimen/dim_25"
+                            android:layout_centerInParent="true"
+                            android:theme="@style/Progressbar.Green" />
+
+                        <ImageView
+                            android:id="@+id/ivIcon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/ivLottieView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:visibility="gone"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/dim_10"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/dim_80">
+
+                    <LinearLayout
+                        android:id="@+id/lDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/app_name"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/textSize_14" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_8"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/rubik_regular"
+                                android:includeFontPadding="false"
+                                android:text="Withdraw Date:  "
+                                android:textColor="#4E4E4E"
+                                android:textSize="@dimen/textSize_12" />
+
+                            <TextView
+                                android:id="@+id/txtDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/rubik_medium"
+                                android:includeFontPadding="false"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/textSize_12"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutCouponCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_8"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/rubik_medium"
+                                        android:includeFontPadding="false"
+                                        android:text="Your Coupon Code"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/textSize_10" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/lReferral"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/dim_34"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginTop="@dimen/dim_5"
+                                        android:background="@drawable/dashed_width_bg"
+                                        android:visibility="visible">
+
+                                        <TextView
+                                            android:id="@+id/txtCoupon"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_toLeftOf="@+id/layoutCopyCode"
+                                            android:fontFamily="@font/rubik_medium"
+                                            android:includeFontPadding="false"
+                                            android:letterSpacing="0.09"
+                                            android:lineSpacingExtra="@dimen/dim_1"
+                                            android:lineSpacingMultiplier="1.2"
+                                            android:paddingLeft="@dimen/dim_10"
+                                            android:paddingRight="@dimen/dim_10"
+                                            android:singleLine="true"
+                                            android:textColor="@color/colorPrimary"
+                                            android:textSize="@dimen/textSize_15" />
+
+                                        <LinearLayout
+                                            android:id="@+id/layoutCopyCode"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            android:padding="@dimen/dim_5">
+
+                                            <ImageView
+                                                android:layout_width="@dimen/dim_15"
+                                                android:layout_height="@dimen/dim_15"
+                                                android:src="@drawable/ic_copy_img"
+                                                app:tint="@color/black_font" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/rubik_medium"
+                                                android:includeFontPadding="false"
+                                                android:paddingLeft="@dimen/dim_5"
+                                                android:paddingRight="@dimen/dim_5"
+                                                android:text="COPY"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/textSize_10" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutTransaction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_8"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/rubik_regular"
+                                android:includeFontPadding="false"
+                                android:text="Txn Id:  "
+                                android:textColor="#4E4E4E"
+                                android:textSize="@dimen/textSize_12" />
+
+                            <TextView
+                                android:id="@+id/txtTxn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/rubik_medium"
+                                android:includeFontPadding="false"
+                                android:text=""
+                                android:textColor="@color/black_font"
+                                android:textSize="@dimen/textSize_12" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutDeliveryDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_8"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/rubik_regular"
+                                android:includeFontPadding="false"
+                                android:text="Txn Date:  "
+                                android:textColor="#4E4E4E"
+                                android:textSize="@dimen/textSize_12" />
+
+                            <TextView
+                                android:id="@+id/txtDeliveryDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/rubik_medium"
+                                android:includeFontPadding="false"
+                                android:text=""
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/textSize_12" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_8"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/rubik_regular"
+                                android:includeFontPadding="false"
+                                android:text="Mobile:  "
+                                android:textColor="@color/black_transparent_light"
+                                android:textSize="@dimen/textSize_12" />
+
+                            <TextView
+                                android:id="@+id/txtMobile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/rubik_medium"
+                                android:includeFontPadding="false"
+                                android:text=""
+                                android:textColor="@color/black_font"
+                                android:textSize="@dimen/textSize_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/dim_10"
+                    android:layout_marginBottom="@dimen/dim_10"
+                    android:gravity="right"
+                    android:minHeight="@dimen/dim_65"
+                    android:orientation="vertical"
+                    android:paddingRight="@dimen/dim_10">
+
+                    <TextView
+                        android:id="@+id/txtPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_medium"
+                        android:includeFontPadding="false"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_14" />
+
+                    <TextView
+                        android:id="@+id/lblPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_3"
+                        android:fontFamily="@font/rubik_regular"
+                        android:includeFontPadding="false"
+                        android:text="Bucks"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_12" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/ivStatus"
+                        android:layout_width="@dimen/dim_24"
+                        android:layout_height="@dimen/dim_24"
+                        android:src="@drawable/ic_verified_img" />
+
+                    <TextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_3"
+                        android:fontFamily="@font/rubik_regular"
+                        android:includeFontPadding="false"
+                        android:text="Refund"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_12" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txtNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relTop"
+                android:layout_marginStart="@dimen/dim_10"
+                android:layout_marginEnd="@dimen/dim_10"
+                android:layout_marginBottom="@dimen/dim_10"
+                android:background="@drawable/edt_bg"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dim_10"
+                android:paddingTop="@dimen/dim_8"
+                android:paddingRight="@dimen/dim_10"
+                android:paddingBottom="@dimen/dim_8"
+                android:text="@string/titleTaskOffer"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_12" />
+
+        </RelativeLayout>
+<!--    </androidx.cardview.widget.CardView>-->
+
+    <FrameLayout
+        android:id="@+id/fl_adplaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutContent"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginRight="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:background="@drawable/rectangle_white"
+        android:elevation="@dimen/dim_3"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dim_20"
+        android:background="@drawable/dialog_bg_white"
+        android:elevation="@dimen/dim_2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:minHeight="@dimen/dim_50"
+            android:padding="@dimen/dim_10"
+            android:text="@string/app_name"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_18" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_0_5"
+                android:background="@color/border_grey" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="@dimen/dim_90"
+                android:layout_height="@dimen/dim_90"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dim_10"
+                android:scaleType="centerCrop"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/gift_box"
+                app:lottie_speed="1.5" />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_5"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginBottom="@dimen/dim_15"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="asdas asd adad asd a"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_16" />
+
+            <View
+                android:id="@+id/viewSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_0_5"
+                android:background="@color/border_grey" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dim_15"
+                android:layout_marginBottom="@dimen/dim_15">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEarnMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/selector_button_gradient"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="@dimen/dim_20"
+                    android:paddingRight="@dimen/dim_20"
+                    android:text="Earn More Bucks"
+                    android:textAllCaps="false"
+                    android:textColor="@color/button_selector"
+                    android:textSize="@dimen/textSize_15" />
+
+                <View
+                    android:id="@+id/viewShine"
+                    android:layout_width="@dimen/dim_25"
+                    android:layout_height="@dimen/dim_50"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_shine_gradient"
+                    android:elevation="@dimen/dim_2"
+                    android:rotation="22" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

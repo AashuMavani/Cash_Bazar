@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim_10"
+        android:layout_marginHorizontal="@dimen/dim_10"
+        android:layout_marginVertical="@dimen/dim_5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="@dimen/dim_20"
+            android:layout_height="@dimen/dim_20"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="1"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_10" />
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/dim_50"
+            android:layout_height="@dimen/dim_50"
+            android:layout_gravity="center_vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:civ_border_color="@color/yellow"
+                app:civ_border_width="@dimen/dim_1"
+                app:civ_circle_background_color="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/probr"
+                android:layout_width="@dimen/dim_20"
+                android:layout_height="@dimen/dim_20"
+                android:layout_centerInParent="true"
+                android:theme="@style/Progressbar.Green" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dim_15"
+            android:layout_marginRight="@dimen/dim_15"
+            android:layout_weight="1"
+            android:fontFamily="@font/rubik_bold"
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            android:text="Test"
+            android:textColor="@color/black_font"
+            android:textSize="@dimen/textSize_15" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/adjoe_leaderboard_coin_design"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="@dimen/dim_16"
+                android:layout_height="@dimen/dim_16"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_coin_img" />
+
+            <TextView
+                android:id="@+id/tvPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dim_5"
+                android:fontFamily="@font/rubik_bold"
+                android:includeFontPadding="false"
+                android:text="10000"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize_15" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+</LinearLayout>

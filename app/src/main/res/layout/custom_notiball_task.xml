@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dim_10">
+
+        <ImageView
+            android:id="@+id/ivNotiImageBig"
+            android:layout_width="@dimen/dim_56"
+            android:layout_height="@dimen/dim_56"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dim_10"
+            android:adjustViewBounds="true"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/lMain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/ivNotiImageBig"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dim_10"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNotiTitleBig"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/rubik_medium"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/textSize_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtNotiDescBig"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_5"
+                    android:fontFamily="@font/rubik_regular"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="@dimen/dim_1"
+                    android:lineSpacingMultiplier="1.1"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/textSize_13"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="@dimen/dim_56"
+                android:layout_height="@dimen/dim_56"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/bg_circule_orange"
+                android:orientation="vertical"
+                app:cardElevation="@dimen/dim_3">
+
+                <TextView
+                    android:id="@+id/txtPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/rubik_medium"
+                    android:includeFontPadding="false"
+                    android:text="10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dim_2"
+                    android:fontFamily="@font/rubik_medium"
+                    android:includeFontPadding="false"
+                    android:text="Bucks"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_10" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtInstall"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dim_40"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:background="@drawable/ic_btn_gradient_rounded_corner_red"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingLeft="@dimen/dim_20"
+        android:paddingRight="@dimen/dim_20"
+        android:text="Install now"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_15"
+        android:textStyle="bold"
+        android:visibility="visible" />
+</LinearLayout>

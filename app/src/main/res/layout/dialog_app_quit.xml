@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/dialog_header_light_gray_bg"
+        android:elevation="@dimen/dim_2"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_adplaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dim_20"
+            android:background="@drawable/dialog_bg_white"
+            android:elevation="@dimen/dim_3" />
+
+        <TextView
+            android:id="@+id/tvTapAgainToExit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/dim_5"
+            android:background="@drawable/dialog_header_white"
+            android:elevation="@dimen/dim_3"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:minHeight="@dimen/dim_54"
+            android:text="@string/tap_to_exit"
+            android:textAllCaps="false"
+            android:textColor="@color/icon_tint"
+            android:textSize="@dimen/textSize_18" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_close_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dim_20"
+        android:layout_marginRight="@dimen/dim_20"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dim_10"
+        app:cardElevation="@dimen/dim_3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dim_80"
+                android:layout_height="@dimen/dim_80"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dim_12">
+
+                <ProgressBar
+                    android:id="@+id/probrBanner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:theme="@style/Progressbar.Green" />
+
+                <ImageView
+                    android:id="@+id/ivIconDailog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/ivLottieViewDailog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_12"
+                android:layout_marginRight="@dimen/dim_15"
+                android:fontFamily="@font/rubik_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Mobile number"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textSize_16"
+                tools:ignore="MissingPrefix" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_45"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_8"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginBottom="@dimen/dim_10"
+                android:background="@drawable/edt_bg"
+                android:elevation="@dimen/dim_2"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="MissingPrefix">
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/ivCountry"-->
+                <!--                    android:layout_width="@dimen/dim_25"-->
+                <!--                    android:layout_height="@dimen/dim_25"-->
+                <!--                    android:layout_marginLeft="@dimen/dim_15"-->
+                <!--                    android:layout_marginRight="@dimen/dim_10"-->
+                <!--                    android:src="@drawable/ic_flag_india"/>-->
+
+                <TextView
+                    android:id="@+id/tvLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dim_45"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_marginRight="@dimen/dim_15"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="left|center_vertical"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="@dimen/dim_1"
+                    android:lineSpacingMultiplier="1.3"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/textSize_15"
+                    android:visibility="gone"
+                    tools:ignore="MissingPrefix" />
+
+                <View
+                    android:id="@+id/viewSeparator"
+                    android:layout_width="@dimen/dim_0_5"
+                    android:layout_height="match_parent"
+                    android:background="#C9CACC"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/etMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_45"
+                    android:background="@null"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="left|center_vertical"
+                    android:hint="Enter mobile number"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="@dimen/dim_1"
+                    android:lineSpacingMultiplier="1.3"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/dim_15"
+                    android:paddingRight="@dimen/dim_15"
+                    android:singleLine="true"
+                    android:textColor="@color/black_font"
+                    android:textColorHint="@color/light_grey_font"
+                    android:textSize="@dimen/textSize_15"
+                    tools:ignore="MissingPrefix" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_45"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_marginTop="@dimen/dim_10"
+                    android:layout_marginRight="@dimen/dim_5"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:layout_weight="1.2"
+                    android:background="@null"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/textSize_14" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRedeem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_45"
+                    android:layout_marginLeft="@dimen/dim_5"
+                    android:layout_marginTop="@dimen/dim_10"
+                    android:layout_marginRight="@dimen/dim_15"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn"
+                    android:fontFamily="@font/rubik_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Redeem"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_15" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

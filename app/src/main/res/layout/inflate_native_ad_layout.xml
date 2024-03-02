@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutAds"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lblLoadingAds"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_250"
+        android:background="@drawable/rectangle_white"
+        android:elevation="@dimen/dim_2"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginRight="@dimen/dim_15"
+        android:text="Loading Ads..."
+        android:textColor="@color/grey_font"
+        android:textSize="@dimen/textSize_16" />
+
+    <FrameLayout
+        android:id="@+id/fl_adplaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_15"
+        android:layout_marginRight="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_10"
+        android:background="@drawable/rectangle_white"
+        android:elevation="@dimen/dim_2" />
+
+</LinearLayout>

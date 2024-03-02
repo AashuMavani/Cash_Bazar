@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dim_10"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginRight="@dimen/dim_5"
+        android:layout_marginBottom="@dimen/dim_10"
+        app:cardCornerRadius="@dimen/dim_10"
+        android:elevation="@dimen/dim_3"
+        android:innerRadius="@dimen/dim_10">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="visible"
+            app:cardCornerRadius="@dimen/dim_10">
+
+            <RelativeLayout
+                android:id="@+id/layoutBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dim_10"
+                    android:theme="@style/Progressbar.Green" />
+
+                <ImageView
+                    android:id="@+id/ivBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_80"
+                    android:adjustViewBounds="true"
+                    android:background="@color/grey_blue_black_font"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/ivLottieView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_80"
+                    android:background="@color/grey_blue_black_font"
+                    android:scaleType="fitXY"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true" />
+
+                <!--            <androidx.cardview.widget.CardView-->
+                <!--                android:id="@+id/cardImage"-->
+                <!--                android:layout_width="@dimen/dim_50"-->
+                <!--                android:layout_height="@dimen/dim_50"-->
+                <!--                android:layout_marginLeft="@dimen/dim_10"-->
+                <!--                app:cardBackgroundColor="@color/white"-->
+                <!--                android:layout_below="@id/ivBanner"-->
+                <!--                app:cardCornerRadius="@dimen/dim_20">-->
+
+                <RelativeLayout
+                    android:id="@+id/cardImage"
+                    android:layout_width="@dimen/dim_70"
+                    android:layout_height="@dimen/dim_50"
+                    android:layout_below="@id/ivBanner"
+                    android:layout_marginLeft="@dimen/dim_10"
+                    app:cardBackgroundColor="@color/white">
+
+                    <ImageView
+                        android:id="@+id/ivSmallIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/white"
+                        android:scaleType="fitXY" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/ltSmallIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:background="@color/white"
+                        android:scaleType="fitXY"
+                        android:visibility="gone"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+                </RelativeLayout>
+                <!--            </androidx.cardview.widget.CardView>-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_50"
+                    android:layout_marginLeft="@dimen/dim_5"
+                    android:layout_toRightOf="@id/cardImage"
+                    android:layout_below="@id/ivBanner"
+                    android:layout_centerVertical="true">
+
+
+
+                    <TextView
+                        android:id="@+id/tvAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="2"
+                        android:text="123"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/textSize_15" />
+
+                    <TextView
+                        android:id="@+id/tvpdh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_5"
+                        android:layout_toRightOf="@id/tvAmount"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="2"
+                        android:text="("
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black_font"
+                        android:fontFamily="@font/noto_regular"
+                        android:textSize="@dimen/textSize_15" />
+
+                    <TextView
+                        android:id="@+id/tvPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_1"
+                        android:layout_toRightOf="@id/tvpdh"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="2"
+                        android:text="123"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/textSize_15" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_2"
+                        android:layout_toRightOf="@id/tvPoints"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="2"
+                        android:text="Bucks)"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/noto_regular"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/textSize_15" />
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_below="@+id/cardImage"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_8"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/rubik_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:lines="2"
+                            android:maxLines="2"
+                            android:textColor="@color/grey_font"
+                            android:textSize="@dimen/textSize_13"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <!-- <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/dim_30"
+                         android:layout_gravity="center"
+                         android:layout_marginTop="@dimen/dim_5"
+                         android:background="@color/colorPrimary"
+                         android:gravity="center"
+                         android:orientation="horizontal">
+
+                         <com.airbnb.lottie.LottieAnimationView
+                             android:layout_width="@dimen/dim_15"
+                             android:layout_height="@dimen/dim_15"
+                             android:src="@drawable/ic_coin_img"
+                             app:lottie_autoPlay="true"
+                             app:lottie_loop="true" />
+
+                         <TextView
+                             android:id="@+id/tvPoints"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="@dimen/dim_5"
+                             android:fontFamily="@font/rubik_medium"
+                             android:includeFontPadding="false"
+                             android:text="10"
+                             android:textColor="@color/white"
+                             android:textSize="@dimen/textSize_15"
+                             android:visibility="visible" />
+                     </LinearLayout>-->
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

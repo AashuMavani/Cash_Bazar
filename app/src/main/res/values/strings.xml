@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Cash Bazar</string>
+    <string name="privacy_policy"><u>Privacy policy</u></string>
+    <string name="app_content_inst" translatable="false">Thank you for choosing our app! We take your personal information and privacy protection very seriously.\n\nIn order to better protect your personal rights and interest, please carefully read all the terms in the Privacy Policy and Terms &amp; Conditions before using our app.\n\nThe act of clicking on \'<b>I Accept</b>\' button means that you have read all the contents of the below Privacy Policy and Terms &amp; Conditions and you agree to the </string>
+   <string name="terms_and_condition" translatable="false">Please read this User Agreement carefully before using the CashBazar mobile application. By using the CashBazar App, you agree to the following:\n\n<b>Acceptance of Terms</b>: You accept the terms of this Agreement, as well as our our Privacy Policy and Terms and Conditions, by using the App.\n\n<b>Privacy Policy</b>: Your use of the App is governed by our Privacy Policy, which explains how we handle your personal information.\n\n<b>Terms and Conditions</b>: Your use of the App is also subject to our Terms and Conditions, which outline the rules for using the App.\n\n<b>Eligibility</b>: You must be at least 18 years old to use the CashBazar App.\n\n<b>Use of the App</b>: You agree to use the App in compliance with all applicable laws and regulations.\n\n<b>Termination</b>: CashBazar reserves the right to terminate your access to the App for any violation of this Agreement or for any reason we find appropriate.\n\nBy using the CashBazar App, you acknowledge and accept this Agreement. If you do not agree to these terms, please do not use the App.</string>
+    <string name="app_terms" translatable="false"><u>Terms &amp; Conditions</u></string>
+    <string name="i_agree_terms" translatable="false">I agree to the <b>Privacy Policy</b> and <b>Terms &amp; Conditions</b></string>
+
+    <string name="i_accept" translatable="false"> Agree</string>
+    <string name="quit" translatable="false">Quit</string>
+    <string name="privacy_title" translatable="false">User Agreement &amp; Privacy Policy</string>
+
+    <string name="update">Update</string>
+    <string name="give_us_a_rating">Give us a rating</string>
+    <string name="rate_us_please_message">Rate us, please? It would take only a few seconds and it would mean a whole lot to us!</string>
+    <string name="enter_your_feedback">Enter your feedback</string>
+    <string name="oh_we_need_to_do_better">Oh! We need to do better. We will come back later.</string>
+    <string name="rate_us">Rate Us</string>
+    <!--AdMob Id-->
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="tap_to_exit">Tap again to exit</string>
+    <string name="visit_again">Visit again to earn more.</string>
+    <string name="thank_you_for_using">Thank You For Using Cash Bazar!</string>
+    <string name="titleTaskOffer">All Task (Easy &amp; Fast Earning)</string>
+    <string name="txtDisclaimer">Disclaimer</string>
+    <string name="txtTaskDetails">How to claim reward?</string>
+    <string name="underlined_claim_reward_text"><u>How to claim reward?</u></string>
+    <string name="playtime_games_leaderboard">Playtime Games Leaderboard</string>
+    <string name="history"><u>See History</u></string>
+    <string name="txtUnlimitedCoin">Unlimted Coins</string>
+    <string name="privacy_policy_desc">  By Log in button you agree with our   \n   <b>Tearms and conditions</b>, and our <b>privacy policy</b>.</string>
+    <string name="default_web_client_id" translatable="false">31644440914-tk06lvnd6n4uobb62c0chdiihikok6e1.apps.googleusercontent.com</string>
+    <string-array name="animations_array">
+        <item>Alpha (Default)</item>
+        <item>Scale</item>
+        <item>Set (Scale + Alpha)</item>
+    </string-array>
+</resources>

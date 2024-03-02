@@ -1,0 +1,110 @@
+{
+	"v": "5.9.6",
+	"fr": 24,
+	"ip": 0,
+	"op": 84,
+	"w": 300,
+	"h": 300,
+	"nm": "Comp 1",
+	"ddd": 0,
+	"assets": [
+		{
+			"id": "image_0",
+			"w": 326,
+			"h": 326,
+			"u": "",
+			"p": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUYAAAFGBAMAAADk+SvDAAAAJHpUWHRDcmVhdG9yAAAImXNMyU9KVXBMK0ktUnBNS0tNLikGAEF6Bs5qehXFAAAACXBIWXMAAAABAAAAAQBPJcTWAAAAD1BMVEVHcEz///////////////8T4DEaAAAABHRSTlMAgTLOwsis6wAAB/xJREFUeNrtnWtiqyoQgAWzAJOwAJO4AJO6gKjsf023Oae9bXg5g4DjvcPf1snHvIARpKoATV6Pn+3UVumavLxEXhOJvBwH/dXup0SEl/O3yPl+XS/tX8C/lCk6Ls9vMud1BjII/whcjShSCpVK2201pHAI1WOkKi/a3Zr0iJ8tquvKI0zPayDl4BOLd3XpRYw3zKsN6cTKgCytH9GIt5BYHGQYMd4lRVgsBjJk6L/CIhkX5bbJRMUqUizKHZM4zRpFLvdd32GSag1oTRY1QvOkhEiKUqSCCAZlX5AkrfE5EtZ5SO9vMEl6SpsbMdlXAAXpOeUQg/N1pVNJiu79krVrsCC0sTu46MeaMXCNsRVCdJvArSMiW2JEPxLJ0T2KsdZp+t+h5Ey53DEkG6dGpEMOOoki/V39uB+PZ+tXVrnj/BL5gVWkT43zsXUti3EZUrhnivIyoBTpDurfa9VzfNDU3jTtoXzAc+M98C9TdMi8J8Az2NtrwIAnoudnKiTWqcoeNg7Y+X6IDezwg2IAjdoCNCTVsYG94GsuR2sAicc1asrI0XDxOYcmJ0CObRZt1sQxjrCp27z8L4/l+Gzi0uMELIE1SxEzAvJcE5cee+DkbVrwWd8UTsQlcUjX5MJgK6ArAZmAsYWuJvqgnsdqA0aLYgpGdQNKdE8w4wGUVmUosgV8+pqT0UrSjf9voTVPVkYzbCa/I0zVRoymska/H7SbMfpJBGIxlZfRtGjv03CzIaNXXQoxdc3MaLDMHifoN2Ws3Q4pMDWS3IzS7XcdZpWSm9Ew9hOyHirOWDs1NmAWANkZpWt+JlEL0uyMhllbR8j0mzPWDtc7oIo4+RmlI2g61Lo+P+N7fEy2/ScCjJ0dH7haWAFGuxgicTXFAox2UUPgykwFGCtLazWuXFeCUZne1+HKniUYD+aPdLgVcwnG2lSbwlVwSjAK0/0GXNWzBGNlhjGyelyE0dCbxIV1GUb1niAl8m1GEUajEiuQP1qE8fDOWONSTxnGOsDYEGE0qsUH5MuM8oxPmozy/Vc65IurIozVe7LpkC8AyzAOu2NU5BnHN8aRDKNiRmZkxkSMe8g9VBk78nOKCb1BovzcbLJrAuTm4U9suWeDdWFvVMNbEoxyCKwLKdZ7Phlxbz42qO29bDvgDgsUrzXPFvTcbs5obKoYK3sLQ7sxo2vfR21twG03ZLQ3EfcV5jzGNq2xqvjk2t8AUaQZR9tXyLXJnmTQdEf0cYey7uiq7JJ0R+zxm01MTdnYP0NzRzyqaUd245uw0YsYyops/DNfimqkqsgmtISgqEbcSddSzZpr38ghPpYWjPQs/cfatCDdC1RSLulbQxOC9C/z5ZkIYvBrHxcKqlz8HNT1/LEl5/xxXP9VrSI1UmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkRmZkxv8B4+W48Zmz+3WJkP7ZPTJnIFsf4Q7Oku7gTC6xk+zO71rt4Iz4Ds7aS3KItksqeoymtffwDQ1FknGkr8Z3RSqijCN9Nf5WZEeWcSI6Cr7lSPqm/vlAqiLM+G3sgTDjTN/U35HdkWZ8knfHrzQuB9KMmr47Ou450zS/PdvBVo3Fainmd62sO8SIfgt5cI49W9akbmYW38O3uffwjXOB8sZC34o3GPfwzf0DztQb3HP23MUdEN17CNFgNO7SUK7Vw+Y1++EtSPbGyPf4MCMz/vcY93BnE99fmIaR6l2VB/Jziuf70w1Nxj3cQSsozsPrAOOTCOMhsC4kebd0u4s7uvdw1/ku7oxXuORTglGY/tcRr/dMdk2AAmNnMiILPsVre71VsyfBOJghIjVq5lOA0XE1Jblac21bVqFGwwKMnR0hHWqkKcA42Eo7oBwyP6NwvNPEVe3zM9aOd8O4tx/5GZXLrhpj7Pzv4pybPhTG2NkZhdOsB4yxszMq554PgTF2bkbp3iglNcLYuRlrj8IGhLFzMyoPS+fbiFaeUXj2m5n6HTdk9KrL3DDcbsYYIFE+DZdm7PwWRez7yMrourPZ46khRWZl7HQgegewR+ZkFL4dms4OjCCn7sGMNUgBKkhRaw3LkTkZxQKEtTeyBVVYoxgbWMBYDJ2GWbuOY4R0TS0h2Lv3TsuR18QxurPGTS/626BBLqmQr0pcjDPIGR3/Zu94nZulsQrOuPicY6foBOiHK25uuOKQJyZ7CKLLjo5tuXPYI2YEY/hBF+K4PAH+2lMKWQ9BmgqpyLndtl/s6ne7B7o7IRi7gBc5T4e6E7T7ZNxvVSrMwidopV9d9xyxfYDml+YmYusC2AbBaJrz60SrPPp2frewmdFP+7gfj+dBI6br4cB+9fwl8sP7ixNwor7QMGGNPrjRQqeY4TahGFPJximyRzHWadSIPPSKckdc/x8VfM2zeCAjj0OGty7fcrkjyiF7zJi1dB6jWpEh4y0k8mQelLEXe39L4NbrjP3AzlASRTUisiGxKIYcUQ3vPajzlxwRA/Z14MhwzqNGkCIf6WQ1UYwiYd+lyqLG5c6PiEhcgmwiGcWaMRAH+ahi2y0dYhhyjkYMih3RKVeeU3UXmH2jfPyS2BnDLnlKaZh1iJ616tgmlDevRXQKPa2RZx6RvbfV+ma4+jrCP+36s7C+n6o07fIv5XxMJFNej5/t1Fbpmry8RF5BIv8BbIRuQhr4xdQAAAAASUVORK5CYII=",
+			"e": 1
+		}
+	],
+	"layers": [
+		{
+			"ddd": 0,
+			"ind": 1,
+			"ty": 2,
+			"nm": "Icon.png",
+			"cl": "png",
+			"refId": "image_0",
+			"sr": 1,
+			"ks": {
+				"o": {
+					"a": 0,
+					"k": 100,
+					"ix": 11
+				},
+				"r": {
+					"a": 1,
+					"k": [
+						{
+							"i": {
+								"x": [
+									0.314
+								],
+								"y": [
+									0.996
+								]
+							},
+							"o": {
+								"x": [
+									0.314
+								],
+								"y": [
+									0
+								]
+							},
+							"t": 0,
+							"s": [
+								0
+							]
+						},
+						{
+							"t": 84,
+							"s": [
+								360
+							]
+						}
+					],
+					"ix": 10
+				},
+				"p": {
+					"a": 0,
+					"k": [
+						150,
+						150,
+						0
+					],
+					"ix": 2,
+					"l": 2
+				},
+				"a": {
+					"a": 0,
+					"k": [
+						163,
+						163,
+						0
+					],
+					"ix": 1,
+					"l": 2
+				},
+				"s": {
+					"a": 0,
+					"k": [
+						70,
+						70,
+						100
+					],
+					"ix": 6,
+					"l": 2
+				}
+			},
+			"ao": 0,
+			"ip": 0,
+			"op": 120,
+			"st": 0,
+			"bm": 0
+		}
+	],
+	"markers": [
+		
+	]
+}

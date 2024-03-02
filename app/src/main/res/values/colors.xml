@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#EFFBEF</color>
+<!--    <color name="background">#FFFFFF</color>-->
+    <color name="colorPrimary">#03a600</color>
+    <color name="colorPrimaryDark">#006400</color>
+    <color name="colorAccent">#000000</color>
+    <color name="border_grey">#e5e5e5</color>
+<!--    <color name="red_light">#DDC6C6</color>-->
+    <color name="red_light">#C3DDC4</color>
+    <color name="menu_selected">#A10B09</color>
+
+    <color name="red">#C61D24</color>
+    <color name="orange">#FF6D00</color>
+    <color name="blue">#4D89F8</color>
+    <color name="dark_blue">#00308F</color>
+    <color name="orange_yellow">#03A9F4</color>
+    <color name="yellow">#ECD50B</color>
+
+    <item name="darkblue" type="color">#FF0099CC</item>
+    <item name="darkpurple" type="color">#FF9933CC</item>
+    <item name="darkgreen" type="color">#FF669900</item>
+    <item name="darkorange" type="color">#FFFF8800</item>
+
+    <color name="black_font">#333333</color>
+    <color name="grey_blue_black_font">#8D9499</color>
+    <color name="grey_font">#5A5A5A</color>
+    <color name="light_grey_font">#80A0A0A0</color>
+
+    <color name="tools_bg_grey">#F4F4F4</color>
+
+    <color name="grey_button">#EBEBEB</color>
+    <color name="grey_button_pressed">#DEDEDE</color>
+
+    <color name="icon_tint">#9d9d9d</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_black">#444444</color>
+
+    <color name="dark_yellow">#E3B448</color>
+
+
+    <color name="black_transparent">#B3000000</color>
+    <color name="black_transparent_dark">#CC000000</color>
+    <color name="black_transparent_light">#90000000</color>
+    <color name="task_color">#323131</color>
+    <color name="blue_transparent">#80087e3a</color>
+    <color name="green">#006400</color>
+    <color name="dark_gray">#ACABAB</color>
+    <color name="gray">#E6E6E6</color>
+
+    <color name="splashgreen">#104031</color>
+    <color name="darkgreentab">#2C5F2D</color>
+
+    <color name="maroon">#800000</color>
+</resources>

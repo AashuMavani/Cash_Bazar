@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1129204585",
+    "project_id": "cash-bazar-a3e22",
+    "storage_bucket": "cash-bazar-a3e22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1129204585:android:46a1f05a60cff3e8d2cbf8",
+        "android_client_info": {
+          "package_name": "com.reward.cashbazar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1129204585-arf72f80herca0nsukmpa7c3mmfied7f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reward.cashbazar",
+            "certificate_hash": "494dafcf03a6cd1903848d5ee3020ec3d6598b46"
+          }
+        },
+        {
+          "client_id": "1129204585-9fjeitgddvbr3ksqtqn3eh0rk3tppgtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2J2KrUAoQw1mAJ33XW78K95AdW9EOL-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1129204585-9fjeitgddvbr3ksqtqn3eh0rk3tppgtp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

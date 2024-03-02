@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_5"
+            android:layout_marginRight="@dimen/dim_5"
+            android:layout_marginBottom="@dimen/dim_10"
+            android:elevation="@dimen/dim_2"
+            android:orientation="vertical" />
+
+        <RelativeLayout
+            android:id="@+id/relStory"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_110">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_marginTop="@dimen/dim_5"
+                android:layout_marginRight="@dimen/dim_5"
+                android:layout_marginBottom="@dimen/dim_10"
+                android:innerRadius="0dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/dim_8"
+                app:cardElevation="@dimen/dim_1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_btn_gradient_rounded_corner_rect_new1">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/lnr_point">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardview_image"
+                            android:layout_width="@dimen/dim_50"
+                            android:layout_height="@dimen/dim_50"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            app:cardCornerRadius="@dimen/_5sdp">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/dim_50"
+                                android:layout_height="@dimen/dim_50"
+                                android:layout_centerVertical="true">
+
+                                <ProgressBar
+                                    android:id="@+id/progressbar"
+                                    android:layout_width="@dimen/dim_25"
+                                    android:layout_height="@dimen/dim_25"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:theme="@style/Progressbar.Green" />
+
+                                <ImageView
+                                    android:id="@+id/ivBanner"
+                                    android:layout_width="@dimen/dim_50"
+                                    android:layout_height="@dimen/dim_50"
+                                    android:layout_centerVertical="true"
+                                    android:scaleType="fitXY" />
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/ivLottieView"
+                                    android:layout_width="@dimen/dim_50"
+                                    android:layout_height="@dimen/dim_50"
+                                    android:layout_centerVertical="true"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    app:lottie_autoPlay="true"
+                                    app:lottie_loop="true"
+                                    tools:ignore="MissingClass" />
+
+                                <ImageView
+                                    android:id="@+id/ivGIF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:adjustViewBounds="true"
+                                    android:visibility="gone" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/txtLable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_toRightOf="@+id/cardview_image"
+                            android:elevation="@dimen/dim_2"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/rubik_medium"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="new"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textSize_14"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnr_point"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorPrimary"
+                        android:elevation="@dimen/dim_20"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dim_8"
+                        android:paddingRight="@dimen/dim_8">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="@dimen/dim_15"
+                            android:layout_height="@dimen/dim_15"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_coin_img" />
+
+                        <TextView
+                            android:id="@+id/txtPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dim_25"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dim_5"
+                            android:background="@null"
+                            android:fontFamily="@font/rubik_medium"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="20"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_12" />
+
+                    </LinearLayout>
+
+
+                    <!--   <TextView
+                           android:id="@+id/txtLable"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_alignParentBottom="true"
+                           android:background="@color/colorPrimary"
+                           android:elevation="@dimen/dim_2"
+                           android:ellipsize="end"
+                           android:fontFamily="@font/rubik_medium"
+                           android:gravity="center"
+                           android:includeFontPadding="false"
+                           android:padding="@dimen/dim_8"
+                           android:singleLine="true"
+                           android:text="new"
+                           android:textColor="@color/white"
+                           android:textSize="@dimen/textSize_14"
+                           android:visibility="visible" />-->
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</LinearLayout>

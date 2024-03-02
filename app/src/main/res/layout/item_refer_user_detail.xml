@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginRight="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dim_10"
+        app:cardElevation="@dimen/dim_3">
+
+        <LinearLayout
+            android:id="@+id/relTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/relBgImage"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lNew"
+                    android:layout_width="@dimen/dim_25"
+                    android:layout_height="@dimen/dim_25"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_ad_label"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_5"
+                        android:layout_marginTop="@dimen/dim_5"
+                        android:fontFamily="@font/rubik_medium"
+                        android:includeFontPadding="false"
+                        android:rotation="-45"
+                        android:text="New"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_8" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_10"
+                    android:layout_marginTop="@dimen/dim_10"
+                    android:layout_marginEnd="@dimen/dim_10"
+                    android:layout_marginBottom="@dimen/dim_10"
+                    android:layout_toLeftOf="@+id/lNew">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@+id/lPoint"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="@dimen/dim_10"
+                            android:fontFamily="@font/rubik_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/app_name"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/textSize_14" />
+
+                        <TextView
+                            android:id="@+id/txtDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_5"
+                            android:layout_marginRight="@dimen/dim_10"
+                            android:fontFamily="@font/rubik_medium"
+                            android:includeFontPadding="false"
+                            android:text="Wallet balance"
+                            android:textColor="@color/black_font"
+                            android:textSize="@dimen/textSize_12"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/fl_adplaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutContent"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginRight="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:background="@drawable/rectangle_white"
+        android:elevation="@dimen/dim_3"
+        android:visibility="gone" />
+</LinearLayout>

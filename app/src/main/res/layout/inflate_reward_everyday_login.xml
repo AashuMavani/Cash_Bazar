@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relSlider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_15"
+        android:layout_marginEnd="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginBottom="@dimen/dim_5"
+        android:background="@drawable/ic_btn_gradient_rounded_corner_rect_new1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lblTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="@dimen/dim_1"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingLeft="@dimen/dim_15"
+            android:paddingTop="@dimen/dim_10"
+            android:paddingRight="@dimen/dim_15"
+            android:paddingBottom="@dimen/dim_5"
+            android:text="15 Days login challenge"
+            android:textAllCaps="false"
+            android:textColor="@color/black_font"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/lblSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="@dimen/dim_1"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingLeft="@dimen/dim_15"
+            android:paddingRight="@dimen/dim_15"
+            android:layout_marginBottom="5dp"
+            android:text="(Use CashBazar everyday &amp; claim FREE bucks)"
+            android:textAllCaps="false"
+            android:textColor="@color/grey_font"
+            android:textSize="@dimen/textSize_13" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDailyLoginList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginRight="@dimen/dim_15"
+            android:layout_marginBottom="@dimen/dim_5"
+            android:orientation="horizontal"
+            android:scrollbarSize="@dimen/dim_3"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_evryday_login" />
+    </LinearLayout>
+</LinearLayout>

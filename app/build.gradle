@@ -1,0 +1,146 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.firebase.firebase-perf'
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+    id 'applovin-quality-service'
+}
+applovin {
+    apiKey "QC_xE2WotomS81frDK4rrkdgT7Qdi5wZkZM60lX51MDtRgTRtMm0fTZh39TCwLOvSa2EAnUVpiUOoEUkcMwJcX"
+}
+android {
+    namespace 'com.reward.cashbazar'
+    compileSdkVersion 34
+    defaultConfig {
+        applicationId "com.reward.cashbazar"
+        minSdkVersion 23
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0.0"
+
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "true"]
+        }
+        debug {
+            shrinkResources false
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "false"]
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+            version '3.22.1'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    implementation 'androidx.navigation:navigation-fragment:2.7.5'
+    implementation 'androidx.navigation:navigation-ui:2.7.5'
+
+    implementation platform('com.google.firebase:firebase-bom:29.3.1')
+    implementation 'com.google.firebase:firebase-core'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-perf'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-inappmessaging-display'
+    implementation 'com.google.firebase:firebase-auth'
+
+    implementation "com.android.installreferrer:installreferrer:2.2"
+
+    implementation 'com.google.code.gson:gson:2.9.1'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    implementation 'com.github.rtoshiro.securesharedpreferences:securesharedpreferences:1.2.0'
+    implementation 'com.github.mehrtarh:CircleButtonBar:v1.1.3'
+
+    def lifecycle_version = '2.4.0'
+    implementation "androidx.lifecycle:lifecycle-process:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+    //OneSignal SDK
+    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
+
+    // Lottie dependency
+    def lottieVersion = "4.2.2"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.github.skydoves:progressview:1.1.3'
+
+    implementation 'androidx.palette:palette:1.0.0'
+    implementation 'com.google.android.gms:play-services-auth:20.6.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+
+    // For country selection
+    implementation 'com.github.mukeshsolanki:country-picker-android:2.0.4'
+    implementation 'com.bignerdranch.android:expandablerecyclerview:3.0.0-RC1'
+    implementation('com.github.skydoves:balloon:1.4.7')
+            {
+                exclude group: 'androidx.lifecycle'
+            }
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+    implementation 'com.github.myinnos:AndroidScratchCard:v1.0'
+    implementation 'com.github.otpless-tech:otpless-android-sdk:1.1.5'
+
+    implementation 'com.applovin:applovin-sdk:11.11.2'
+
+    implementation 'com.applovin.mediation:facebook-adapter:6.14.0.0'
+    implementation 'com.applovin.mediation:mintegral-adapter:16.4.71.0'
+
+    implementation 'io.adjoe:adjoe-sdk-android:2.0.7'
+    implementation 'com.github.MakeOpinionGmbH:cpx-research-SDK-Android:1.5.9'
+
+    implementation project(':Wheel')
+    implementation project(':library')
+
+    implementation 'com.pubscale.sdkone:offerwall:1.0.5'
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+}

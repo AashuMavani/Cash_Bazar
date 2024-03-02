@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/lnr_itemgiveaway"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvGiveawayCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/bg_dashed_background"
+        android:includeFontPadding="false"
+        android:paddingLeft="@dimen/dim_8"
+        android:paddingTop="@dimen/dim_3"
+        android:paddingRight="@dimen/dim_8"
+        android:paddingBottom="@dimen/dim_3"
+        android:layout_marginRight="@dimen/dim_8"
+        android:textAllCaps="false"
+        android:textColor="#EB9C5C"
+        android:textSize="@dimen/textSize_15"
+        app:fontFamily="@font/rubik_bold" />
+</LinearLayout>

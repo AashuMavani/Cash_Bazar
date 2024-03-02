@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMain"
+    android:animateLayoutChanges="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/dialog_header_white">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dim_10">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dim_90"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/dim_15"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/you_win" />
+
+                    <TextView
+                        android:id="@+id/tvPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_20"
+                        android:layout_marginBottom="@dimen/dim_10"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="0"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/textSize_26" />
+
+                    <TextView
+                        android:id="@+id/lblPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_5"
+                        android:layout_marginBottom="@dimen/dim_10"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:singleLine="true"
+                        android:text="Bucks"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/textSize_18" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_5"
+                        android:layout_marginBottom="@dimen/dim_10"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:singleLine="true"
+                        android:text="will be added to your wallet!"
+                        android:textColor="@color/grey_font"
+                        android:textSize="@dimen/textSize_15" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnOk"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_40"
+                        android:layout_marginLeft="@dimen/dim_15"
+                        android:layout_marginTop="@dimen/dim_10"
+                        android:layout_marginRight="@dimen/dim_15"
+                        android:layout_marginBottom="@dimen/dim_10"
+                        android:background="@drawable/selector_button_gradient"
+                        android:elevation="@dimen/dim_2"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingLeft="@dimen/dim_30"
+                        android:paddingRight="@dimen/dim_30"
+                        android:text="Claim Now"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_15" />
+
+                    <TextView
+                        android:id="@+id/lblLoadingAds"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_300"
+                        android:layout_marginLeft="@dimen/dim_15"
+                        android:layout_marginTop="@dimen/dim_10"
+                        android:layout_marginRight="@dimen/dim_15"
+                        android:layout_marginBottom="@dimen/dim_10"
+                        android:background="@drawable/rectangle_white"
+                        android:elevation="@dimen/dim_3"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="Loading Ads..."
+                        android:textColor="@color/grey_font"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <FrameLayout
+                        android:id="@+id/fl_adplaceholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_15"
+                        android:layout_marginTop="@dimen/dim_10"
+                        android:layout_marginRight="@dimen/dim_15"
+                        android:layout_marginBottom="@dimen/dim_10"
+                        android:background="@drawable/rectangle_white"
+                        android:elevation="@dimen/dim_3"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="@dimen/dim_32"
+                    android:layout_height="@dimen/dim_32"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dim_10"
+                    android:layout_marginRight="@dimen/dim_10"
+                    android:padding="@dimen/dim_3"
+                    android:src="@drawable/ic_close_img"
+                    android:visibility="visible"
+                    app:tint="@color/light_grey_font" />
+            </RelativeLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_250"
+                android:adjustViewBounds="true"
+                android:visibility="gone"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false"
+                app:lottie_repeatCount="1"/>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

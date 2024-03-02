@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutMain"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@drawable/header_bg_red">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="@dimen/dim_30"
+                android:layout_height="@dimen/dim_30"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_back_img"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/layoutPoints1"
+                android:layout_toRightOf="@id/iv_left"
+                android:fontFamily="@font/rubik_medium"
+                android:layout_gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dim_20"
+                android:text="Bombsweeper"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize_18"
+                tools:ignore="MissingPrefix" />
+
+            <LinearLayout
+                android:id="@+id/layoutPoints1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_marginRight="@dimen/dim_10"
+                android:layout_toLeftOf="@id/ivHistory"
+                android:background="@drawable/bg_wallet_balance_boarder"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dim_5"
+                android:paddingTop="@dimen/dim_5"
+                android:paddingRight="@dimen/dim_8"
+                android:paddingBottom="@dimen/dim_5">
+
+                <ImageView
+                    android:layout_width="@dimen/dim_20"
+                    android:layout_height="@dimen/dim_20"
+                    android:layout_gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_coin_img" />
+
+                <TextView
+                    android:id="@+id/tvPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/dim_5"
+                    android:text="100"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/textSize_16"
+                    tools:ignore="MissingPrefix" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivHistory"
+                android:layout_width="@dimen/dim_32"
+                android:layout_height="@dimen/dim_32"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dim_15"
+                android:padding="@dimen/dim_2"
+                android:src="@drawable/ic_history" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutBannerAdBottom"
+        android:layout_below="@id/toolbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/layoutData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutDailyLimitCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10"
+                android:layout_marginBottom="@dimen/dim_10"
+                android:padding="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:background="@drawable/background_module"
+                android:layout_marginRight="@dimen/dim_15"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layoutDaily"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/dim_2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dim_10"
+                    android:paddingBottom="@dimen/dim_10">
+
+                    <TextView
+                        android:id="@+id/lblDailySpin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="Daily Limit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_15"
+                        app:fontFamily="@font/noto_medium" />
+
+                    <TextView
+                        android:id="@+id/tvDailyPuzzle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_5"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_18"
+                        app:fontFamily="@font/noto_extra_bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@color/dark_gray" />
+
+                <LinearLayout
+                    android:id="@+id/layoutRemain"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/dim_2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dim_10"
+                    android:paddingTop="@dimen/dim_10">
+
+                    <TextView
+                        android:id="@+id/lblRemainSpin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="Remaining"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_15"
+                        app:fontFamily="@font/noto_medium" />
+
+                    <TextView
+                        android:id="@+id/tvRemainPuzzle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_5"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_18"
+                        app:fontFamily="@font/noto_extra_bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@color/dark_gray" />
+
+
+
+                <LinearLayout
+                    android:id="@+id/layout_point"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/dim_2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dim_10"
+                    android:paddingBottom="@dimen/dim_10">
+
+                    <TextView
+                        android:id="@+id/lbl_point"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="Bucks"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_15"
+                        app:fontFamily="@font/noto_medium" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_5">
+
+                        <ImageView
+                            android:layout_width="@dimen/dim_20"
+                            android:layout_height="@dimen/dim_15"
+                            android:layout_marginRight="@dimen/dim_5"
+                            android:layout_gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_coin_img" />
+
+
+                        <TextView
+                            android:id="@+id/tvWinningPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_18"
+                            app:fontFamily="@font/noto_extra_bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblFindAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutDailyLimitCount"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginBottom="@dimen/dim_10"
+                android:fontFamily="@font/noto_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:letterSpacing="0.01"
+                android:paddingLeft="@dimen/dim_15"
+                android:paddingTop="@dimen/dim_5"
+                android:paddingRight="@dimen/dim_15"
+                android:paddingBottom="@dimen/dim_5"
+                android:background="@drawable/orange_bg_color"
+                android:text="Mines to find!!"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize_16" />
+
+           <!-- <LinearLayout
+                android:id="@+id/layoutObjectSelection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginBottom="@dimen/dim_10"
+                android:background="@drawable/orange_bg_color"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dim_10"
+                android:paddingBottom="@dimen/dim_10">
+
+                <TextView
+                    android:id="@+id/lblFindAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/noto_extra_bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="@dimen/dim_1"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="Mines to find!!"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_16"
+                    android:visibility="visible" />
+            </LinearLayout>-->
+
+
+            <WebView
+                android:id="@+id/webNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:ignore="WebViewLayout" />
+
+            <FrameLayout
+                android:id="@+id/frame_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_marginRight="@dimen/dim_10">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listdatagame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    tools:listitem="@layout/raw_minesweeper" />
+
+                <LinearLayout
+                    android:id="@+id/layoutRemainingTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black_transparent_dark"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/lblTimer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_20"
+                        android:layout_marginRight="@dimen/dim_20"
+                        android:layout_marginBottom="@dimen/dim_5"
+                        android:fontFamily="@font/noto_extra_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="Please wait, next Game will get ready in..."
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <TextView
+                        android:id="@+id/tvRemainingTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_20"
+                        android:layout_marginTop="@dimen/dim_20"
+                        android:layout_marginRight="@dimen/dim_20"
+                        android:layout_marginBottom="@dimen/dim_5"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="@dimen/dim_1"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="00:00:00"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textSize_22" />
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameLovinBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginBottom="@dimen/dim_15"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layoutAds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/lblLoadingAds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim_15"
+                    android:background="@drawable/rectangle_white"
+                    android:elevation="@dimen/dim_3"
+                    android:fontFamily="@font/noto_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Loading Ads..."
+                    android:textColor="@color/grey_font"
+                    android:textSize="@dimen/textSize_16" />
+
+                <FrameLayout
+                    android:id="@+id/fl_adplaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim_15"
+                    android:background="@drawable/rectangle_white"
+                    android:elevation="@dimen/dim_3"
+                    android:layout_gravity="bottom"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/layoutBannerAdBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dim_3"
+        android:paddingBottom="@dimen/dim_3"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/lblAdSpaceBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Reserved space for Ads"
+            android:textColor="@color/black_font"
+            android:textSize="@dimen/textSize_15" />
+    </LinearLayout>
+
+</RelativeLayout>

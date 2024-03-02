@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relSlider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtTitleHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:layout_marginTop="@dimen/dim_5"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dim_15"
+        android:singleLine="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/textSize_14"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvIconlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginRight="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:background="@drawable/ic_btn_gradient_rounded_corner_rect_new1"
+        android:paddingLeft="@dimen/dim_10"
+        android:paddingRight="@dimen/dim_10"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dim_10"
+        android:paddingBottom="@dimen/dim_10"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_app_icon" />
+
+<!--    android:layout_marginBottom="@dimen/dim_3"-->
+</LinearLayout>

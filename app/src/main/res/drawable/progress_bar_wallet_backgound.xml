@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="@dimen/dim_15" />
+            <solid android:color="@color/white" />
+            <stroke android:color="@color/colorPrimary" android:width="@dimen/dim_1"/>
+        </shape>
+    </item>
+
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="@dimen/dim_15" />
+                <solid android:color="#FEDEE4" />
+                <stroke android:color="#FB6483" android:width="@dimen/dim_1"/>
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="@dimen/dim_15" />
+                <stroke android:color="@color/colorPrimary" android:width="@dimen/dim_1"/>
+                <solid android:color="#ACE0AB" />
+            </shape>
+        </clip>
+    </item>
+
+
+
+
+    <!--<item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="@dimen/dim_15" />
+            <solid android:color="#F8C49E" />
+            <stroke android:color="@color/orange" android:width="@dimen/dim_1"/>
+        </shape>
+    </item>
+
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="@dimen/dim_15" />
+                <solid android:color="#FEDEE4" />
+                <stroke android:color="#FB6483" android:width="@dimen/dim_1"/>
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="@dimen/dim_15" />
+                <solid android:color="@color/orange" />
+            </shape>
+        </clip>
+    </item>-->
+
+</layer-list>

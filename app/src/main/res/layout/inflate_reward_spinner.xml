@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relSlider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFullImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginEnd="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dim_75">
+
+            <ProgressBar
+                android:id="@+id/progressBarFullImage"
+                android:layout_width="@dimen/dim_34"
+                android:layout_height="@dimen/dim_34"
+                android:layout_centerInParent="true"
+                android:theme="@style/Progressbar.Green" />
+
+            <ImageView
+                android:id="@+id/ivIconFullImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:visibility="visible" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/ivLottieFullImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginEnd="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:innerRadius="0dp"
+        android:visibility="visible"
+        app:cardCornerRadius="@dimen/dim_10">
+
+        <LinearLayout
+            android:id="@+id/layoutSpin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_btn_gradient_rounded_corner_rect_new1"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rlt_image"
+                android:layout_width="@dimen/dim_56"
+                android:layout_height="@dimen/dim_56"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_marginTop="@dimen/dim_10"
+                android:layout_marginBottom="@dimen/dim_10">
+
+                <ProgressBar
+                    android:id="@+id/probr"
+                    android:layout_width="@dimen/dim_25"
+                    android:layout_height="@dimen/dim_25"
+                    android:layout_centerInParent="true"
+                    android:theme="@style/Progressbar.Green" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/ivLottie"
+                    android:layout_width="@dimen/dim_56"
+                    android:layout_height="@dimen/dim_56"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="visible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true" />
+
+                <ImageView
+                    android:id="@+id/ivIcon"
+                    android:layout_width="@dimen/dim_56"
+                    android:layout_height="@dimen/dim_56"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+
+                    <TextView
+                        android:id="@+id/lblTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_10"
+                        android:layout_marginRight="@dimen/dim_10"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="left"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="@dimen/dim_1"
+                        android:lineSpacingMultiplier="1.2"
+                        android:paddingLeft="@dimen/dim_10"
+                        android:text="15 Days login challenge"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <TextView
+                        android:id="@+id/lblSubTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_5"
+                        android:layout_marginRight="@dimen/dim_10"
+                        android:layout_marginBottom="@dimen/dim_10"
+                        android:fontFamily="@font/rubik_regular"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="0.01"
+                        android:paddingLeft="@dimen/dim_10"
+                        android:text="(Use PocketEarn everyday &amp; claim FREE points)"
+                        android:textAllCaps="false"
+                        android:textColor="@color/grey_font"
+                        android:textSize="@dimen/textSize_13" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutTimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@drawable/bg_everyday_reward_timer"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="@dimen/dim_0_5"
+                        android:layout_marginBottom="@dimen/dim_1"
+                        android:visibility="">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/bg_everyday_reward_timer"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/dim_8"
+                            android:paddingBottom="@dimen/dim_3"
+                            android:paddingTop="@dimen/dim_3"
+                            android:paddingRight="@dimen/dim_8">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/rubik_medium"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0.01"
+                                android:lineSpacingExtra="@dimen/dim_1"
+                                android:lineSpacingMultiplier="1.2"
+                                android:paddingRight="@dimen/dim_8"
+                                android:text="Today's time left:"
+                                android:textAllCaps="false"
+                                android:textColor="#143D59"
+                                android:textSize="@dimen/textSize_10" />
+
+                            <TextView
+                                android:id="@+id/tvTimer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/rubik_medium"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:singleLine="true"
+                                android:text="00:00:00"
+                                android:textAllCaps="false"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/textSize_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_label_orange_color"
+                    android:backgroundTint="@color/red"
+                    android:clickable="false"
+                    android:elevation="@dimen/dim_2"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/dim_5"
+                    android:paddingTop="@dimen/dim_2"
+                    android:paddingRight="@dimen/dim_5"
+                    android:paddingBottom="@dimen/dim_2"
+                    android:text="Medium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_10"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

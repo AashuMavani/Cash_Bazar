@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relStory"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_180">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_5"
+            android:layout_marginRight="@dimen/dim_5"
+            android:layout_marginBottom="@dimen/dim_10"
+            android:innerRadius="0dp"
+            android:visibility="visible"
+            app:cardCornerRadius="@dimen/dim_17"
+            app:cardElevation="@dimen/dim_2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    tools:ignore="MissingClass" />
+
+                <ImageView
+                    android:id="@+id/ivPoint"
+                    android:layout_width="@dimen/dim_34"
+                    android:layout_height="@dimen/dim_34"
+                    android:layout_above="@id/lblWon"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_coin_img" />
+
+                <TextView
+                    android:id="@+id/lblWon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tvPoints"
+                    android:ellipsize="end"
+                    android:layout_marginTop="@dimen/dim_15"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="You've won"
+                    android:textColor="@color/grey_font"
+                    android:textSize="@dimen/textSize_14"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvPoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tvTaskName"
+                    android:layout_marginBottom="@dimen/dim_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/dim_5"
+                    android:singleLine="true"
+                    android:text="100"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/textSize_20"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvTaskName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorPrimary"
+                    android:elevation="@dimen/dim_2"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/dim_8"
+                    android:singleLine="true"
+                    android:text="new"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_14"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/probr"
+            android:layout_width="@dimen/dim_25"
+            android:layout_height="@dimen/dim_25"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dim_50"
+            android:elevation="@dimen/dim_2"
+            android:theme="@style/Progressbar.Green" />
+
+    </RelativeLayout>
+
+</LinearLayout>

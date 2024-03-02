@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginRight="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dim_10"
+        app:cardElevation="@dimen/dim_3">
+
+        <LinearLayout
+            android:id="@+id/relTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_marginRight="@dimen/dim_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvContestId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/dim_10"
+                    android:layout_marginRight="@dimen/dim_10"
+                    android:layout_marginBottom="@dimen/dim_5"
+                    android:background="@drawable/bg_contest_number_black"
+                    android:elevation="@dimen/dim_3"
+                    android:fontFamily="@font/rubik_medium"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="@dimen/dim_10"
+                    android:paddingTop="@dimen/dim_3"
+                    android:paddingRight="@dimen/dim_10"
+                    android:paddingBottom="@dimen/dim_3"
+                    android:text="Contest Id: 1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dim_10"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_8"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/rubik_medium"
+                                android:includeFontPadding="false"
+                                android:text="Participation Date:  "
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textSize_12" />
+
+                            <TextView
+                                android:id="@+id/tvParticipationDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/rubik_medium"
+                                android:includeFontPadding="false"
+                                android:textColor="@color/black_font"
+                                android:textSize="@dimen/textSize_12"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/dim_8"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/rubik_medium"
+                                android:includeFontPadding="false"
+                                android:paddingRight="@dimen/dim_10"
+                                android:singleLine="true"
+                                android:text="My Selected Numbers:"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textSize_12" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedNumber1"
+                                android:layout_width="@dimen/dim_24"
+                                android:layout_height="@dimen/dim_24"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/dim_5"
+                                android:background="@drawable/bg_lucky_number"
+                                android:fontFamily="@font/rubik_medium"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textSize_13" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedNumber2"
+                                android:layout_width="@dimen/dim_24"
+                                android:layout_height="@dimen/dim_24"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/dim_10"
+                                android:background="@drawable/bg_lucky_number"
+                                android:fontFamily="@font/rubik_medium"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textSize_13" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/bg_sidemenu_social_white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dim_5">
+
+                        <TextView
+                            android:id="@+id/tvPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_medium"
+                            android:includeFontPadding="false"
+                            android:text="+0"
+                            android:textColor="@color/black_font"
+                            android:textSize="@dimen/textSize_14"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/lblPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_5"
+                            android:fontFamily="@font/rubik_regular"
+                            android:includeFontPadding="false"
+                            android:text="Bucks"
+                            android:textColor="@color/grey_font"
+                            android:textSize="@dimen/textSize_12"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvResultPending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dim_15"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:background="@drawable/edt_bg"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="@dimen/dim_10"
+                    android:paddingTop="@dimen/dim_5"
+                    android:paddingRight="@dimen/dim_10"
+                    android:paddingBottom="@dimen/dim_5"
+                    android:singleLine="true"
+                    android:text="Contest result is pending"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textSize_12" />
+
+                <LinearLayout
+                    android:id="@+id/layoutResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/dim_10"
+                    android:background="@drawable/dashed_width_bg_with_background"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dim_10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_medium"
+                            android:includeFontPadding="false"
+                            android:text="Result Date:  "
+                            android:textColor="@color/grey_font"
+                            android:textSize="@dimen/textSize_12" />
+
+                        <TextView
+                            android:id="@+id/tvResultDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_medium"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/black_font"
+                            android:textSize="@dimen/textSize_12"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dim_8">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/rubik_medium"
+                            android:includeFontPadding="false"
+                            android:paddingRight="@dimen/dim_10"
+                            android:singleLine="true"
+                            android:text="Winning Numbers:"
+                            android:textColor="@color/grey_font"
+                            android:textSize="@dimen/textSize_12" />
+
+
+                        <TextView
+                            android:id="@+id/tvWinningNumber1"
+                            android:layout_width="@dimen/dim_24"
+                            android:layout_height="@dimen/dim_24"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dim_5"
+                            android:background="@drawable/bg_lucky_number_selected"
+                            android:fontFamily="@font/rubik_medium"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_13" />
+
+
+                        <TextView
+                            android:id="@+id/tvWinningNumber2"
+                            android:layout_width="@dimen/dim_24"
+                            android:layout_height="@dimen/dim_24"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dim_10"
+                            android:background="@drawable/bg_lucky_number_selected"
+                            android:fontFamily="@font/rubik_medium"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_13" />
+
+                        <TextView
+                            android:id="@+id/tvNotWin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/rubik_medium"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:text="Better luck, next time!"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/textSize_12"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutPoints"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_25"
+                android:layout_marginTop="@dimen/dim_8"
+                android:background="@drawable/bg_point_history">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/rubik_medium"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="@dimen/dim_10"
+                    android:text="You won"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_12"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="@dimen/dim_15"
+                        android:layout_height="@dimen/dim_15"
+                        android:src="@drawable/ic_coin_img" />
+
+                    <TextView
+                        android:id="@+id/tvWinningPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_5"
+                        android:fontFamily="@font/rubik_medium"
+                        android:includeFontPadding="false"
+                        android:paddingRight="@dimen/dim_10"
+                        android:text="10"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_12"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/fl_adplaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutContent"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginRight="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:background="@drawable/rectangle_white"
+        android:elevation="@dimen/dim_3"
+        android:visibility="gone" />
+</LinearLayout>

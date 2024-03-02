@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+   <!-- <androidx.cardview.widget.CardView
+        android:id="@+id/cardContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginRight="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dim_10"
+        app:cardElevation="@dimen/dim_3">-->
+
+        <LinearLayout
+            android:id="@+id/relTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginRight="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_5"
+            android:layout_marginBottom="@dimen/dim_5"
+            android:background="@drawable/ic_btn_gradient_rounded_corner_rect_new1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/relBgImage"
+                android:layout_marginBottom="@dimen/dim_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lNew"
+                    android:layout_width="@dimen/dim_25"
+                    android:layout_height="@dimen/dim_25"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_ad_label"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_5"
+                        android:layout_marginTop="@dimen/dim_5"
+                        android:fontFamily="@font/noto_extra_bold"
+                        android:includeFontPadding="false"
+                        android:rotation="-45"
+                        android:text="New"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_8" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_10"
+                    android:layout_marginTop="@dimen/dim_10"
+                    android:layout_marginEnd="@dimen/dim_10"
+                    android:layout_marginBottom="@dimen/dim_5"
+                    android:layout_toLeftOf="@+id/lNew">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardIcon"
+                        android:layout_width="@dimen/dim_50"
+                        android:layout_height="@dimen/dim_50"
+                        android:layout_centerVertical="true"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dim_10"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ProgressBar
+                                android:id="@+id/probr"
+                                android:layout_width="@dimen/dim_25"
+                                android:layout_height="@dimen/dim_25"
+                                android:layout_centerInParent="true"
+                                android:theme="@style/Progressbar.Green" />
+
+                            <ImageView
+                                android:id="@+id/ivIcon"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/ivLottieView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true" />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@+id/lPoint"
+                        android:layout_toRightOf="@+id/cardIcon"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="@dimen/dim_10"
+                            android:layout_marginRight="@dimen/dim_10"
+                            android:fontFamily="@font/noto_extra_bold"
+                            android:includeFontPadding="false"
+                            android:text="@string/app_name"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/textSize_14" />
+
+                        <LinearLayout
+                            android:id="@+id/layoutSubTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_10"
+                            android:layout_marginTop="@dimen/dim_5"
+                            android:layout_marginRight="@dimen/dim_10"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblSubTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/noto_medium"
+                                android:includeFontPadding="false"
+                                android:text="Task Name:  "
+                                android:textColor="#302F2F"
+                                android:textSize="@dimen/textSize_14" />
+
+                            <TextView
+                                android:id="@+id/txtSubTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/noto_extra_bold"
+                                android:includeFontPadding="false"
+                                android:text=""
+                                android:textColor="@color/black_font"
+                                android:textSize="@dimen/textSize_14" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txtDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relTitle"
+                            android:layout_marginLeft="@dimen/dim_10"
+                            android:layout_marginTop="@dimen/dim_5"
+                            android:layout_marginRight="@dimen/dim_10"
+                            android:layout_toRightOf="@+id/cardIcon"
+                            android:fontFamily="@font/noto_medium"
+                            android:includeFontPadding="false"
+                            android:text="Wallet balance"
+                            android:textColor="@color/black_font"
+                            android:textSize="@dimen/textSize_12"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:layout_marginEnd="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
+                        android:background="@drawable/white_border"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dim_5">
+
+                        <TextView
+                            android:id="@+id/txtPoint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_medium"
+                            android:includeFontPadding="false"
+                            android:text="+0"
+                            android:textColor="@color/black_font"
+                            android:textSize="@dimen/textSize_14"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/lblPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_5"
+                            android:fontFamily="@font/rubik_regular"
+                            android:includeFontPadding="false"
+                            android:text="Bucks"
+                            android:textColor="#302F2F"
+                            android:textSize="@dimen/textSize_12"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                  <!--  <LinearLayout
+                        android:id="@+id/lPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="right"
+                        android:background="@drawable/white_border"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtPoint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_extra_bold"
+                            android:includeFontPadding="false"
+                            android:text="+0"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/textSize_14"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/lblPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_5"
+                            android:fontFamily="@font/noto_regular"
+                            android:includeFontPadding="false"
+                            android:text="Points"
+                            android:textColor="@color/light_grey_font"
+                            android:textSize="@dimen/textSize_12"
+                            android:visibility="visible" />
+
+                    </LinearLayout>-->
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/view_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="-1dp"
+                    android:background="#B1B1B1"
+                    android:layout_marginLeft="@dimen/dim_1"
+                    android:layout_marginRight="@dimen/dim_1"
+                    android:visibility="visible"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/layoutWalletBalance"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_25"
+                    android:background="@drawable/bg_point_history"
+                    android:visibility="visible"
+                    android:layout_marginBottom="-2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/noto_medium"
+                        android:includeFontPadding="false"
+                        android:paddingLeft="@dimen/dim_10"
+                        android:text="Wallet balance"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_12"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="@dimen/dim_15"
+                            android:layout_height="@dimen/dim_15"
+                            android:src="@drawable/ic_coin_img" />
+
+                        <TextView
+                            android:id="@+id/txtSettleAmt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_5"
+                            android:fontFamily="@font/noto_medium"
+                            android:includeFontPadding="false"
+                            android:paddingRight="@dimen/dim_10"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_12"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+
+           <!-- <View
+                android:id="@+id/view_point"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="-1dp"
+                android:background="#B1B1B1"
+                android:layout_marginLeft="@dimen/dim_1"
+                android:layout_marginRight="@dimen/dim_1"
+                android:visibility="visible"/>-->
+        </LinearLayout>
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+    <FrameLayout
+        android:id="@+id/fl_adplaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutContent"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginRight="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:background="@drawable/rectangle_white"
+        android:elevation="@dimen/dim_3"
+        android:visibility="gone" />
+</LinearLayout>

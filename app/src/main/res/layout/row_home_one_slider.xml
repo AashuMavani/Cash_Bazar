@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:layout_width="@dimen/dim_40"
+            android:layout_height="@dimen/dim_40"
+            android:layout_centerInParent="true"
+            android:theme="@style/Progressbar.Green" />
+        <RelativeLayout
+            android:id="@+id/relStory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+
+
+          <!--  <ProgressBar
+                android:id="@+id/probr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:theme="@style/Progressbar.Green"
+                android:visibility="visible" />-->
+
+            <!--<androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:innerRadius="0dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/dim_10"
+                app:cardElevation="0dp">-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/relTOP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <include
+                            layout="@layout/common_lottie_gif_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/txtLable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_label_orange"
+                            android:elevation="@dimen/dim_5"
+                            android:padding="@dimen/dim_2"
+                            android:text="new"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_10"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

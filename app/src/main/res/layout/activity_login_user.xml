@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:layoutDirection="ltr"
+    android:gravity="bottom"
+    android:layout_alignParentBottom="true">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:fillViewport="true"
+      android:layout_height="match_parent"
+      android:layout_alignParentBottom="true">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layoutDirection="ltr"
+          android:gravity="bottom|clip_vertical">
+
+          <ImageView
+              android:id="@+id/image_login_screen"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:adjustViewBounds="true"
+              android:layout_marginLeft="@dimen/_20sdp"
+              android:layout_marginRight="@dimen/_20sdp"
+              android:src="@drawable/login_screen"
+              android:layout_marginBottom="@dimen/_2sdp"/>
+
+          <androidx.cardview.widget.CardView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/_20sdp"
+              android:layout_marginRight="@dimen/_20sdp"
+              app:cardCornerRadius="@dimen/_15sdp"
+              android:background="@color/white"
+              app:cardElevation="@dimen/_10sdp"
+              android:layout_below="@+id/image_login_screen"
+              android:layout_marginBottom="@dimen/_30sdp">
+
+              <androidx.core.widget.NestedScrollView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/white"
+                      android:orientation="vertical">
+
+                      <ImageView
+                          android:layout_width="@dimen/_40sdp"
+                          android:layout_height="@dimen/_40sdp"
+                          android:src="@drawable/wallet_vector"
+                          android:layout_gravity="center"
+                          android:layout_marginTop="@dimen/_10sdp"/>
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="Make Money"
+                          android:textColor="#22AD01"
+                          android:textStyle="bold"
+                          android:gravity="center"
+                          android:layout_marginTop="@dimen/_5sdp"
+                          android:textSize="@dimen/_18sdp"/>
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="The best and fastest money earning app in the  \n  Playstore with lowest cashout!"
+                          android:gravity="center"
+                          android:textColor="#7B9F7C"
+                          android:layout_marginTop="@dimen/_5sdp"
+                          android:textSize="@dimen/_10sdp"
+                          android:layout_marginLeft="@dimen/_5sdp"
+                          android:layout_marginRight="@dimen/_5sdp"/>
+
+                      <EditText
+                          android:id="@+id/etReferralCode"
+                          android:layout_width="match_parent"
+                          android:layout_height="@dimen/dim_50"
+                          android:layout_marginTop="@dimen/dim_20"
+                          android:layout_marginLeft="@dimen/_20sdp"
+                          android:layout_marginRight="@dimen/_20sdp"
+                          android:background="@drawable/edt_bg"
+                          android:elevation="@dimen/dim_2"
+                          android:fontFamily="@font/rubik_medium"
+                          android:gravity="center"
+                          android:hint="Enter Referral Code (Optional)"
+                          android:includeFontPadding="false"
+                          android:inputType="textCapCharacters|textNoSuggestions"
+                          android:lineSpacingExtra="@dimen/dim_1"
+                          android:lineSpacingMultiplier="1.3"
+                          android:textAlignment="center"
+                          android:textColor="@color/black"
+                          android:textColorHint="@color/light_grey_font"
+                          android:textSize="@dimen/_12sdp"
+                          tools:ignore="MissingPrefix"
+                          android:visibility="visible"/>
+
+                      <LinearLayout
+                          android:id="@+id/layoutLogin"
+                          android:layout_width="match_parent"
+                          android:layout_height="@dimen/dim_50"
+                          android:layout_marginTop="@dimen/dim_25"
+                          android:background="@drawable/login_google_design"
+                          android:elevation="@dimen/dim_2"
+                          android:foreground="?attr/selectableItemBackground"
+                          android:gravity="center"
+                          android:orientation="horizontal"
+                          android:layout_marginLeft="@dimen/_20sdp"
+                          android:layout_marginRight="@dimen/_20sdp"
+                          android:paddingRight="@dimen/dim_20">
+
+                          <ImageView
+                              android:layout_width="@dimen/dim_25"
+                              android:layout_height="@dimen/dim_25"
+                              android:layout_gravity="center_vertical"
+                              android:src="@drawable/google"/>
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="center_vertical"
+                              android:fontFamily="@font/rubik_medium"
+                              android:gravity="center_vertical"
+                              android:includeFontPadding="false"
+                              android:paddingLeft="@dimen/dim_10"
+                              android:text="Continue With Google"
+                              android:textAllCaps="false"
+                              android:textColor="@color/white"
+                              android:textSize="@dimen/_14sdp" />
+                      </LinearLayout>
+
+                      <TextView
+                          android:id="@+id/btnSkip"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center_horizontal"
+                          android:background="@null"
+                          android:fontFamily="@font/noto_regular"
+                          android:foreground="?attr/selectableItemBackground"
+                          android:gravity="center"
+                          android:includeFontPadding="false"
+                          android:paddingLeft="@dimen/dim_30"
+                          android:paddingRight="@dimen/dim_30"
+                          android:text="Skip Now"
+                          android:textAllCaps="false"
+                          android:textColor="#808080"
+                          android:layout_marginBottom="@dimen/_12sdp"
+                          android:layout_marginTop="@dimen/_10sdp"
+                          android:textSize="@dimen/textSize_16" />
+
+
+
+                  </LinearLayout>
+
+              </androidx.core.widget.NestedScrollView>
+
+
+
+          </androidx.cardview.widget.CardView>
+
+      </RelativeLayout>
+
+
+  </ScrollView>
+
+
+</RelativeLayout>

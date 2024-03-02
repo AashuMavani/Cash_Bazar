@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dim_20"
+        android:background="@drawable/dialog_bg_white"
+        android:elevation="@dimen/dim_2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/dialog_header_white"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:minHeight="@dimen/dim_50"
+            android:padding="@dimen/dim_10"
+            android:text="Update Available"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_18" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_footer_white_bg"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_0_5"
+                android:background="@color/border_grey" />
+
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dim_15"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/rate_us_please_message"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_16" />
+
+            <View
+                android:id="@+id/viewSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_0_5"
+                android:background="@color/border_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutEdittext"
+                android:layout_marginTop="@dimen/dim_15"
+                android:orientation="horizontal">
+
+                <android.widget.Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_button_grey"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey_font"
+                    android:textSize="@dimen/textSize_15" />
+
+                <android.widget.Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_marginRight="@dimen/dim_15"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_button_gradient"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/update"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_15" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

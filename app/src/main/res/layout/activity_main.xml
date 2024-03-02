@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.MainActivity"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        tools:context=".activity.MainActivity2">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:background="@drawable/header_bg_red">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivMenu"
+                    android:layout_width="@dimen/dim_30"
+                    android:layout_height="@dimen/dim_30"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_side_icon_img"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dim_10"
+                    android:layout_marginTop="@dimen/dim_1"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/rubik_medium"
+                    android:marqueeRepeatLimit="1"
+                    android:maxLines="2"
+                    android:text="Home"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_18"
+                    tools:ignore="MissingPrefix" />
+
+                <LinearLayout
+                    android:id="@+id/layoutPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dim_12"
+                    android:layout_marginRight="@dimen/dim_12"
+                    android:background="@drawable/bg_wallet_balance_boarder"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dim_5"
+                    android:paddingTop="@dimen/dim_5"
+                    android:paddingRight="@dimen/dim_8"
+                    android:paddingBottom="@dimen/dim_5">
+
+                    <ImageView
+                        android:layout_width="@dimen/dim_20"
+                        android:layout_height="@dimen/dim_20"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_coin_img" />
+
+
+                    <TextView
+                        android:id="@+id/tvPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/dim_5"
+                        android:text="0"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/textSize_16"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/ivAdjoeLeaderboard"
+                    android:layout_width="@dimen/dim_25"
+                    android:layout_height="@dimen/dim_25"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dim_12"
+                    android:padding="@dimen/dim_1"
+                    android:src="@drawable/ic_leaderboard"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivAdjoe"
+                    android:layout_width="@dimen/dim_25"
+                    android:layout_height="@dimen/dim_25"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dim_12"
+                    android:padding="@dimen/dim_2"
+                    android:visibility="gone"
+                    app:tint="@color/white" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieAdjoe"
+                    android:layout_width="@dimen/dim_25"
+                    android:layout_height="@dimen/dim_25"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dim_12"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true" />
+
+                <LinearLayout
+                    android:id="@+id/layoutHotOffers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dim_32"
+                    android:background="@drawable/bg_home_tool_adjoy"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dim_3"
+                    android:visibility="visible">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="@dimen/dim_24"
+                        android:layout_height="@dimen/dim_24"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/home_fire" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_2"
+                        android:layout_marginRight="@dimen/dim_8"
+                        android:fontFamily="@font/noto_extra_bold"
+                        android:includeFontPadding="false"
+                        android:text="Play a\nGame"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/textSize_8" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/sep"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="@dimen/dim_5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dim_2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dim_5">
+
+                    <LinearLayout
+                        android:id="@+id/layoutWithdrawBalance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_15"
+                        android:layout_marginTop="@dimen/dim_5"
+                        android:layout_marginRight="@dimen/dim_15"
+                        android:layout_marginBottom="@dimen/dim_10"
+                        android:background="@drawable/ic_btn_gradient_rounded_corner_rect_new1"
+                        android:elevation="@dimen/dim_2"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dim_15"
+                        android:paddingRight="@dimen/dim_15">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/dim_15">
+
+                                <TextView
+                                    android:id="@+id/tvNextPayout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:includeFontPadding="false"
+                                    android:text="Next payout for Rs. 0"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textSize_16"
+                                    app:fontFamily="@font/noto_extra_bold" />
+
+                                <TextView
+                                    android:id="@+id/tvWithdrawProgress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/dim_10"
+                                    android:includeFontPadding="false"
+                                    android:letterSpacing="0.01"
+                                    android:text="1000/10000"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textSize_16"
+                                    app:fontFamily="@font/noto_medium" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/dim_16"
+                                    android:layout_height="@dimen/dim_16"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/dim_8"
+                                    android:src="@drawable/ic_coin_img" />
+                            </LinearLayout>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/dim_10"
+                                android:layout_marginBottom="@dimen/dim_10"
+                                android:elevation="0dp"
+                                android:orientation="vertical"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="@dimen/_5sdp">
+
+                                <LinearLayout
+                                    android:id="@+id/linearProgress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/max_progress_bar_backgound">
+
+                                    <com.airbnb.lottie.LottieAnimationView
+                                        android:id="@+id/progressBarWithdraw"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:scaleType="centerCrop"
+                                        android:visibility="visible"
+                                        app:lottie_autoPlay="false"
+                                        app:lottie_loop="true"
+                                        app:lottie_rawRes="@raw/progress" />
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--<ProgressBar
+                                android:id="@+id/progressBarWithdraw"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dim_15"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="@dimen/dim_6"
+                                android:layout_marginBottom="@dimen/dim_12"
+                                android:layout_weight="1"
+                                android:indeterminate="false"
+                                android:minHeight="@dimen/dim_10"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progress_bar_wallet_backgound" />-->
+
+                            <LinearLayout
+                                android:id="@+id/home_withRel"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dim_34"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/dim_10"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/lottie_withdraw"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left|center"
+                                    android:layout_marginRight="@dimen/dim_15"
+                                    android:layout_weight="1"
+                                    android:adjustViewBounds="true"
+                                    android:visibility="visible"
+                                    app:lottie_autoPlay="true"
+                                    app:lottie_loop="true" />
+
+                                <!--                                <LinearLayout-->
+                                <!--                                    android:layout_width="0dp"-->
+                                <!--                                    android:layout_height="wrap_content"-->
+                                <!--                                    android:layout_weight="1">-->
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnWithdraw"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/dim_34"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/selector_btn"
+                                    android:fontFamily="@font/noto_medium"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:paddingLeft="@dimen/dim_25"
+                                    android:paddingRight="@dimen/dim_25"
+                                    android:text="Withdraw"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/selector_button"
+                                    android:textSize="@dimen/textSize_16" />
+
+                                <!--                                </LinearLayout>-->
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutGiveawayCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_marginTop="@dimen/dim_5"
+                    android:layout_marginRight="@dimen/dim_15"
+                    android:layout_marginBottom="@dimen/dim_10"
+                    android:background="@drawable/ic_btn_gradient_rounded_corner_rect_new1"
+                    android:elevation="@dimen/dim_2"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dim_15"
+                    android:paddingTop="@dimen/dim_10"
+                    android:paddingRight="@dimen/dim_8"
+                    android:paddingBottom="@dimen/dim_10"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/dim_34"
+                        android:layout_height="@dimen/dim_34"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/dim_15"
+                        android:padding="@dimen/dim_2"
+                        android:src="@drawable/ic_coupon_code" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/dim_8"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lblGiveawayCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="Have a Giveaway Code?"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black_font"
+                            android:textSize="@dimen/textSize_16"
+                            app:fontFamily="@font/rubik_medium" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvGiveawayCodes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_8"
+                            android:orientation="horizontal"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/dim_24"
+                        android:layout_height="@dimen/dim_24"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_right_arrow"
+                        app:tint="@color/black" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layoutSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.reward.cashbazar.customviews.recyclerviewpager.Recycler_ViewPager
+                        android:id="@+id/rvSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_5"
+                        app:svp_colorActiveIndicator="@color/colorPrimary"
+                        app:svp_colorInactiveIndicator="@color/light_grey_font"
+                        app:svp_runAuto="true"
+                        app:svp_timeMillis="5000" />
+
+                </RelativeLayout>
+
+                <WebView
+                    android:id="@+id/webNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_5"
+                    android:layout_marginBottom="@dimen/dim_3"
+                    android:visibility="gone"
+                    tools:ignore="WebViewLayout" />
+
+                <LinearLayout
+                    android:id="@+id/layoutInflate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dim_10"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/sep" />
+
+        <View
+            android:id="@+id/sep"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_2"
+            android:layout_above="@id/layoutBottomNavigation"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/layoutBottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_60"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:elevation="@dimen/dim_2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutHome"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_60"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivHome"
+                    android:layout_width="@dimen/dim_24"
+                    android:layout_height="@dimen/dim_24"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_home_outline_boarder"
+                    app:tint="@color/selector_menu_text_color" />
+
+                <TextView
+                    android:id="@+id/lblHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dim_5"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Home"
+                    android:textColor="@color/selector_menu_text_color"
+                    android:textSize="@dimen/textSize_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutReward"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_60"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dim_56"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ivReward"
+                        android:layout_width="@dimen/dim_25"
+                        android:layout_height="@dimen/dim_25"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dim_8"
+                        android:src="@drawable/gift_outline_boarder"
+                        app:tint="@color/selector_menu_text_color" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/lblReward"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dim_2"
+                    android:layout_marginBottom="@dimen/dim_10"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Reward"
+                    android:textColor="@color/selector_menu_text_color"
+                    android:textSize="@dimen/textSize_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTasks"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivTasks"
+                    android:layout_width="@dimen/dim_25"
+                    android:layout_height="@dimen/dim_25"
+                    android:layout_gravity="center"
+                    android:src="@drawable/task"
+                    android:visibility="invisible"
+                    app:tint="@color/selector_menu_text_color" />
+
+                <TextView
+                    android:id="@+id/lblTasks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dim_15"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Tasks"
+                    android:textColor="@color/selector_menu_text_color"
+                    android:textSize="@dimen/textSize_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutInvite"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_60"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivInvite"
+                    android:layout_width="@dimen/dim_24"
+                    android:layout_height="@dimen/dim_24"
+                    android:layout_gravity="center"
+                    android:src="@drawable/mail_outline_boader"
+                    app:tint="@color/selector_menu_text_color" />
+
+                <TextView
+                    android:id="@+id/lblInvite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dim_5"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Invite"
+                    android:textColor="@color/selector_menu_text_color"
+                    android:textSize="@dimen/textSize_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutMe"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_60"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivMe"
+                    android:layout_width="@dimen/dim_24"
+                    android:layout_height="@dimen/dim_24"
+                    android:layout_gravity="center"
+                    android:src="@drawable/me_outline"
+                    app:tint="@color/selector_menu_text_color" />
+
+                <TextView
+                    android:id="@+id/lblMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dim_5"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Me"
+                    android:textColor="@color/selector_menu_text_color"
+                    android:textSize="@dimen/textSize_12" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutTasks1"
+            android:layout_width="@dimen/dim_56"
+            android:layout_height="@dimen/dim_56"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dim_30"
+            android:background="@drawable/task_circule_image"
+            android:elevation="@dimen/dim_2">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieViewTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/task_icon" />
+
+            <ImageView
+                android:layout_width="@dimen/dim_56"
+                android:layout_height="@dimen/dim_56"
+                android:layout_gravity="center"
+                android:padding="@dimen/dim_10"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fadeScrollbars="false"
+                android:fillViewport="true"
+                android:scrollIndicators="none"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/background"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layoutUserProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim_120"
+                            android:background="@drawable/drawer_bg"
+                            android:elevation="@dimen/dim_2"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/dim_5"
+                            android:paddingTop="@dimen/dim_15"
+                            android:paddingRight="@dimen/_15sdp"
+                            android:paddingBottom="@dimen/dim_15">
+
+                            <RelativeLayout
+                                android:id="@+id/layoutProfile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/ivProfilePic"
+                                    android:layout_width="@dimen/dim_80"
+                                    android:layout_height="@dimen/dim_80"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/dim_15"
+                                    android:src="@drawable/ic_me_img"
+                                    app:civ_border_color="@color/white"
+                                    app:civ_border_width="@dimen/dim_3"
+                                    app:civ_circle_background_color="#FCC212" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="@dimen/dim_15"
+                                    android:layout_toEndOf="@id/ivProfilePic"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/dim_25"
+                                        android:ellipsize="end"
+                                        android:includeFontPadding="false"
+                                        android:maxLines="1"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/textSize_18"
+                                        app:fontFamily="@font/rubik_medium" />
+
+                                    <TextView
+                                        android:id="@+id/tvEmail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dim_5"
+                                        android:ellipsize="end"
+                                        android:includeFontPadding="false"
+                                        android:maxLines="2"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/textSize_14"
+                                        app:fontFamily="@font/rubik_regular" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_1"
+                        android:background="@color/grey_button_pressed" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMenuList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dim_2" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_1"
+                        android:background="@color/grey_button" />
+
+                    <ImageView
+                        android:id="@+id/menuAdBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/dim_2"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layoutTelegram"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dim_80"
+                            android:layout_marginLeft="@dimen/dim_10"
+                            android:layout_marginTop="@dimen/dim_5"
+                            android:layout_marginRight="@dimen/dim_5"
+                            android:layout_marginBottom="@dimen/dim_10"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_sidemenu_social_white"
+                            android:backgroundTint="@color/white"
+                            android:elevation="@dimen/dim_2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dim_32"
+                                android:layout_height="@dimen/dim_32"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_telegram_img" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="@dimen/dim_5"
+                                android:fontFamily="@font/rubik_medium"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:paddingLeft="@dimen/dim_5"
+                                android:paddingRight="@dimen/dim_5"
+                                android:text="Telegram"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textSize_13" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutYoutube"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dim_80"
+                            android:layout_marginLeft="@dimen/dim_5"
+                            android:layout_marginTop="@dimen/dim_5"
+                            android:layout_marginRight="@dimen/dim_5"
+                            android:layout_marginBottom="@dimen/dim_5"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_sidemenu_social_white"
+                            android:backgroundTint="@color/white"
+                            android:elevation="@dimen/dim_2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dim_32"
+                                android:layout_height="@dimen/dim_32"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_youtube_img" />
+
+                            <TextView
+                                android:id="@+id/tvAddAccount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dim_5"
+                                android:fontFamily="@font/rubik_medium"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:paddingLeft="@dimen/dim_5"
+                                android:paddingRight="@dimen/dim_5"
+                                android:text="YouTube"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textSize_13" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutInstagram"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dim_80"
+                            android:layout_marginLeft="@dimen/dim_5"
+                            android:layout_marginTop="@dimen/dim_5"
+                            android:layout_marginRight="@dimen/dim_10"
+                            android:layout_marginBottom="@dimen/dim_5"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_sidemenu_social_white"
+                            android:backgroundTint="@color/white"
+                            android:elevation="@dimen/dim_2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dim_32"
+                                android:layout_height="@dimen/dim_32"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_instagram_img" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="@dimen/dim_5"
+                                android:fontFamily="@font/rubik_medium"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:paddingLeft="@dimen/dim_5"
+                                android:paddingRight="@dimen/dim_5"
+                                android:text="Instagram"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textSize_13" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvVersionName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:padding="@dimen/dim_5"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/textSize_12" />
+
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

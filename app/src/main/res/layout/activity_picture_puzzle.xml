@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activity.Picture_PuzzleQuizActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@drawable/header_bg_red">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/dim_32"
+                android:layout_height="@dimen/dim_32"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dim_5"
+                android:src="@drawable/ic_back_img"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/layoutPoints"
+                android:layout_toRightOf="@id/ivBack"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="left"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dim_20"
+                android:text="Picture Puzzle"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize_18"
+                tools:ignore="MissingPrefix" />
+
+            <LinearLayout
+                android:id="@+id/layoutPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_marginRight="@dimen/dim_10"
+                android:layout_toLeftOf="@id/ivHelp"
+                android:background="@drawable/bg_wallet_balance_boarder"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dim_5"
+                android:paddingTop="@dimen/dim_5"
+                android:paddingRight="@dimen/dim_8"
+                android:paddingBottom="@dimen/dim_5">
+
+                <ImageView
+                    android:layout_width="@dimen/dim_20"
+                    android:layout_height="@dimen/dim_20"
+                    android:layout_gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_coin_img" />
+
+                <TextView
+                    android:id="@+id/tvPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/dim_5"
+                    android:text="100"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/textSize_16"
+                    tools:ignore="MissingPrefix" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivHelp"
+                android:layout_width="@dimen/dim_32"
+                android:layout_height="@dimen/dim_32"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dim_10"
+                android:layout_toLeftOf="@id/ivHistory"
+                android:padding="@dimen/dim_2"
+                android:src="@drawable/ic_help_img"
+                android:visibility="gone"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/ivHistory"
+                android:layout_width="@dimen/dim_32"
+                android:layout_height="@dimen/dim_32"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dim_15"
+                android:padding="@dimen/dim_2"
+                android:src="@drawable/ic_history"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.reward.cashbazar.utils.Custom_ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/layoutTopAds"
+                layout="@layout/layout_up_banner_ads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <WebView
+                android:id="@+id/webNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:ignore="WebViewLayout" />
+
+            <RelativeLayout
+                android:id="@+id/layoutData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPoint"
+                    android:layout_width="@dimen/dim_65"
+                    android:layout_height="@dimen/dim_65"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_marginTop="@dimen/dim_15"
+                    android:layout_marginRight="@dimen/dim_10"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/dim_50"
+                    app:cardElevation="@dimen/dim_5">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dim_5"
+                        app:cardBackgroundColor="@color/yellow"
+                        app:cardCornerRadius="@dimen/dim_50"
+                        app:cardElevation="@dimen/dim_3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvWinningPoints"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/rubik_medium"
+                                android:includeFontPadding="false"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textSize_16"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/rubik_regular"
+                                android:includeFontPadding="false"
+                                android:text="Bucks"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textSize_10" />
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/layoutTimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dim_15">
+
+                    <TextView
+                        android:id="@+id/lblSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/rubik_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="@dimen/dim_1"
+                        android:lineSpacingMultiplier="1.2"
+                        android:paddingRight="@dimen/dim_10"
+                        android:text="Solve puzzle in"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <TextView
+                        android:id="@+id/tvTimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="0.02"
+                        android:lineSpacingExtra="@dimen/dim_1"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="00:00:00"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textSize_16" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_370sdp"
+                    android:layout_below="@id/layoutTimer"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_marginTop="@dimen/dim_15"
+                    android:layout_marginRight="@dimen/dim_15"
+                    android:layout_marginBottom="@dimen/dim_5">
+
+                    <ImageView
+                        android:id="@+id/tvFrame"
+                        android:layout_width="@dimen/_270sdp"
+                        android:layout_height="@dimen/_270sdp"
+                        android:alpha="1.0"
+                        android:scaleType="fitXY"
+                        app:layout_constraintDimensionRatio="H,4:5"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/frame_image" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="@dimen/_230sdp"
+                        android:layout_height="@dimen/_230sdp"
+                        android:layout_marginStart="@dimen/dim_8"
+                        android:layout_marginTop="@dimen/dim_25"
+                        android:layout_marginEnd="@dimen/dim_8"
+                        android:alpha="0.5"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintDimensionRatio="H,4:5"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/layoutImagePieces"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvMainTimer"
+                        android:layout_width="@dimen/_260sdp"
+                        android:layout_height="@dimen/_260sdp"
+                        android:layout_marginStart="@dimen/dim_8"
+                        android:layout_marginTop="@dimen/dim_6"
+                        android:layout_marginEnd="@dimen/dim_8"
+                        android:background="@color/black_transparent"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="0.04"
+                        android:text="Please Try After\n\n00:00:00"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textSize_24"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutCompleteTask"
+                        android:layout_width="@dimen/_260sdp"
+                        android:layout_height="@dimen/_260sdp"
+                        android:layout_marginStart="@dimen/dim_8"
+                        android:layout_marginTop="@dimen/dim_6"
+                        android:layout_marginEnd="@dimen/dim_8"
+                        android:background="@color/black_transparent_dark"
+                        android:clickable="true"
+                        android:visibility="visible"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="@dimen/dim_70"
+                            android:layout_height="@dimen/dim_70"
+                            android:layout_marginTop="@dimen/dim_20"
+                            android:src="@drawable/task_new_icon" />
+                        <TextView
+                            android:id="@+id/tvTaskNote"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_20"
+                            android:layout_marginTop="@dimen/dim_20"
+                            android:layout_marginRight="@dimen/dim_20"
+                            android:layout_marginBottom="@dimen/dim_5"
+                            android:fontFamily="@font/rubik_medium"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.01"
+                            android:lineSpacingExtra="@dimen/dim_1"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="Please Complete Today's 1 Easy Task to unlock Image Puzzle."
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_18" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_250sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center">
+
+                            <android.widget.Button
+                                android:id="@+id/btnCompleteTask"
+                                android:layout_width="@dimen/_210sdp"
+                                android:layout_height="@dimen/dim_50"
+                                android:layout_marginLeft="@dimen/dim_20"
+                                android:layout_marginTop="@dimen/dim_20"
+                                android:layout_marginRight="@dimen/dim_20"
+                                android:background="@drawable/selector_button_gradient"
+                                android:backgroundTint="@color/blue"
+                                android:fontFamily="@font/rubik_medium"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="Complete Easy Task Now"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize_18" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutNoData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dim_15"
+                android:background="@drawable/rectangle_white"
+                android:elevation="@dimen/dim_3"
+                android:orientation="vertical"
+                android:padding="@dimen/dim_15"
+                android:visibility="gone">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/ivLottieNoData"
+                    android:layout_width="@dimen/dim_240"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:adjustViewBounds="true"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/no_data_animation"
+                    tools:ignore="MissingClass" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_20"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Currently there is no puzzle available to solve. Try again after some time."
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/textSize_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblLoadingAds"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_240"
+                    android:layout_margin="@dimen/dim_15"
+                    android:background="@drawable/rectangle_white"
+                    android:elevation="@dimen/dim_3"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Loading Ads..."
+                    android:textColor="@color/grey_font"
+                    android:textSize="@dimen/textSize_16" />
+
+                <FrameLayout
+                    android:id="@+id/fl_adplaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim_15"
+                    android:background="@drawable/rectangle_white"
+                    android:elevation="@dimen/dim_3"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.reward.cashbazar.utils.Custom_ScrollView>
+
+</RelativeLayout>

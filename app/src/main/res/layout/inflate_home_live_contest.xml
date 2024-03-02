@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relSlider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginEnd="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:visibility="visible"
+        app:cardBackgroundColor="#2BC998"
+        app:cardCornerRadius="@dimen/dim_10"
+        app:cardElevation="@dimen/dim_2">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dim_1"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="@dimen/dim_5"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:id="@+id/layoutContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sidemenu_social_white"
+                android:backgroundTint="#F0FBF7"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/layoutContentClick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_15"
+                            android:layout_marginTop="@dimen/dim_10"
+                            android:layout_marginRight="@dimen/dim_15"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/noto_extra_bold"
+                                android:gravity="left"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0.01"
+                                android:lineSpacingExtra="@dimen/dim_1"
+                                android:lineSpacingMultiplier="1.2"
+                                android:text="15 Days login challenge"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black_font"
+                                android:textSize="@dimen/textSize_16" />
+
+                            <!--   <TextView
+                                   android:id="@+id/tvLabel"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_gravity="end"
+                                   android:layout_marginLeft="@dimen/dim_10"
+                                   android:background="@drawable/bg_label_red"
+                                   android:elevation="@dimen/dim_2"
+                                   android:ellipsize="end"
+                                   android:fontFamily="@font/noto_extra_bold"
+                                   android:gravity="center"
+                                   android:includeFontPadding="false"
+                                   android:maxLines="1"
+                                   android:paddingLeft="@dimen/dim_8"
+                                   android:paddingTop="@dimen/dim_2"
+                                   android:paddingRight="@dimen/dim_8"
+                                   android:paddingBottom="@dimen/dim_2"
+                                   android:text="Live"
+                                   android:textColor="@color/white"
+                                   android:textSize="@dimen/textSize_12" />-->
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblSubTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_5"
+                            android:fontFamily="@font/noto_regular"
+                            android:gravity="left"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.01"
+                            android:lineSpacingExtra="@dimen/dim_1"
+                            android:lineSpacingMultiplier="1.2"
+                            android:paddingLeft="@dimen/dim_15"
+                            android:paddingRight="@dimen/dim_15"
+                            android:text="(Use cash bazar everyday &amp; claim FREE points)"
+                            android:textAllCaps="false"
+                            android:textColor="@color/grey_font"
+                            android:textSize="@dimen/textSize_13" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_10"
+                        android:layout_marginBottom="@dimen/dim_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/layoutIcon"
+                            android:layout_width="@dimen/dim_56"
+                            android:layout_height="@dimen/dim_56"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dim_10"
+                            android:layout_marginTop="@dimen/dim_10"
+                            android:layout_marginBottom="@dimen/dim_10"
+                            android:background="@drawable/rectangle_white"
+                            android:padding="@dimen/dim_6">
+
+                            <ProgressBar
+                                android:id="@+id/probr"
+                                android:layout_width="@dimen/dim_25"
+                                android:layout_height="@dimen/dim_25"
+                                android:layout_centerInParent="true"
+                                android:theme="@style/Progressbar.Green" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/ivLottie"
+                                android:layout_width="@dimen/dim_56"
+                                android:layout_height="@dimen/dim_56"
+                                android:layout_gravity="center_vertical"
+                                android:visibility="visible"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true" />
+
+                            <ImageView
+                                android:id="@+id/ivIcon"
+                                android:layout_width="@dimen/dim_56"
+                                android:layout_height="@dimen/dim_56"
+                                android:layout_gravity="center_vertical"
+                                android:scaleType="fitXY"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_10"
+                            android:layout_marginRight="@dimen/dim_10"
+                            android:background="@drawable/bg_gradient_live_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/dim_10"
+                            android:paddingTop="@dimen/dim_10"
+                            android:paddingRight="@dimen/dim_5"
+                            android:paddingBottom="@dimen/dim_10">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/noto_medium"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:maxLines="1"
+                                    android:text="My Rank"
+                                    android:textColor="@color/black_font"
+                                    android:textSize="@dimen/textSize_15" />
+
+                                <TextView
+                                    android:id="@+id/tvYourRank"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dim_5"
+                                    android:fontFamily="@font/noto_extra_bold"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:text="50+"
+                                    android:textColor="@color/black_font"
+                                    android:textSize="@dimen/textSize_15"
+                                    android:visibility="visible" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/dim_0_7"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/dim_10"
+                                android:layout_marginRight="@dimen/dim_10"
+                                android:background="@color/light_grey_font" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/lblPoints"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/noto_medium"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:maxLines="2"
+                                    android:text="Win Bucks"
+                                    android:textColor="@color/black_font"
+                                    android:textSize="@dimen/textSize_15" />
+
+                                <TextView
+                                    android:id="@+id/tvPoints"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dim_5"
+                                    android:fontFamily="@font/noto_extra_bold"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:text="1000"
+                                    android:textColor="@color/black_font"
+                                    android:textSize="@dimen/textSize_15"
+                                    android:visibility="visible" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="@dimen/dim_30"
+                                android:layout_height="@dimen/dim_30"
+                                android:src="@drawable/ic_right_arrow"
+                                app:tint="@color/grey_font" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end"
+        android:layout_marginRight="@dimen/dim_10"
+        android:background="@drawable/ic_btn_gradient_rounded_corner_red"
+        android:elevation="@dimen/dim_2"
+        android:ellipsize="end"
+        android:fontFamily="@font/noto_extra_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dim_8"
+        android:paddingTop="@dimen/dim_2"
+        android:paddingRight="@dimen/dim_8"
+        android:paddingBottom="@dimen/dim_2"
+        android:text="Live"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_12" />
+</RelativeLayout>

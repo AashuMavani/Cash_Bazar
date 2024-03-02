@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:paddingRight="@dimen/dim_5">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dim_80"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relStory"
+            android:layout_width="@dimen/dim_80"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/lStory"
+                android:layout_width="@dimen/dim_65"
+                android:layout_height="@dimen/dim_65"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/dim_3"
+                android:layout_marginTop="@dimen/dim_5"
+                android:background="@drawable/circule_white"
+                android:elevation="@dimen/dim_2"
+                android:padding="@dimen/dim_1">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:innerRadius="0dp"
+                    android:shape="ring"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/dim_65"
+                    app:cardElevation="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ProgressBar
+                            android:id="@+id/probr"
+                            android:layout_width="@dimen/dim_25"
+                            android:layout_height="@dimen/dim_25"
+                            android:layout_centerInParent="true"
+                            android:theme="@style/Progressbar.Green" />
+
+                        <ImageView
+                            android:id="@+id/ivIcon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/ivLottie"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:visibility="invisible"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtTitleStory"
+                android:layout_width="@dimen/dim_80"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lStory"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim_2"
+                android:ellipsize="end"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_12" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_label_orange_color"
+            android:clickable="false"
+            android:elevation="@dimen/dim_2"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dim_3"
+            android:paddingTop="@dimen/dim_1"
+            android:paddingRight="@dimen/dim_3"
+            android:paddingBottom="@dimen/dim_1"
+            android:text="Medium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_10" />
+    </RelativeLayout>
+</LinearLayout>

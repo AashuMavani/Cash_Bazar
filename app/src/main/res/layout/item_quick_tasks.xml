@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dim_15">
+
+        <RelativeLayout
+            android:id="@+id/layoutIcon"
+            android:layout_width="@dimen/dim_50"
+            android:layout_height="@dimen/dim_50"
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/probr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:theme="@style/Progressbar.Green" />
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rectangle_white"
+                android:elevation="@dimen/dim_2"
+                android:src="@mipmap/ic_launcher" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/ivLottie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_15"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/noto_extra_bold"
+                android:gravity="left"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:textColor="@color/black_font"
+                android:textSize="@dimen/textSize_15" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_3"
+                android:fontFamily="@font/noto_medium"
+                android:includeFontPadding="false"
+                android:textColor="@color/grey_font"
+                android:textSize="@dimen/textSize_13"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dim_15"
+            android:background="@drawable/ic_btn_grey_rounded_corner"
+            android:backgroundTint="#7c6ec9"
+            android:elevation="@dimen/dim_2"
+            android:gravity="center"
+            android:minHeight="@dimen/dim_40"
+            android:padding="@dimen/dim_1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_btn_grey_rounded_corner"
+                android:backgroundTint="#7c6ec9"
+                android:elevation="0dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/layoutPointsInner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_btn_grey_rounded_corner"
+                    android:backgroundTint="#7c6ec9"
+                    android:elevation="0dp"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dim_10"
+                    android:paddingRight="@dimen/dim_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/noto_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:paddingRight="@dimen/dim_5"
+                        android:text="Get"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_15" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="@dimen/dim_20"
+                        android:layout_height="@dimen/dim_20"
+                        android:layout_gravity="center_vertical"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:srcCompat="@drawable/ic_coin_img" />
+
+                    <TextView
+                        android:id="@+id/tvPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/noto_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/dim_5"
+                        android:text="100"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_15" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/sep"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_0_5"
+        android:background="@color/border_grey" />
+</LinearLayout>

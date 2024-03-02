@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_transparent"
+    tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="@dimen/dim_32"
+        android:layout_height="@dimen/dim_32"
+        android:layout_above="@id/tvTitle"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="@dimen/dim_40"
+        android:layout_marginTop="@dimen/dim_40"
+        android:layout_marginEnd="@dimen/dim_40"
+        android:layout_marginBottom="@dimen/dim_15"
+        android:padding="@dimen/dim_2"
+        android:src="@drawable/ic_close_img"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layoutContent"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Important Note!"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_15" />
+
+    <LinearLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/dim_40"
+        android:layout_marginTop="@dimen/dim_15"
+        android:layout_marginEnd="@dimen/dim_40"
+        android:layout_marginBottom="@dimen/dim_20"
+        android:background="@drawable/rectangle_white_scratch_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="@dimen/dim_15"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_15" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relSlider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/cardContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_15"
+            android:layout_marginTop="@dimen/dim_5"
+            android:layout_marginEnd="@dimen/dim_15"
+            android:layout_marginBottom="@dimen/dim_10"
+            android:background="@drawable/ic_btn_gradient_rounded_corner_rect_new1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dim_1"
+                android:background="@drawable/ic_btn_gradient_rounded_corner_rect_new1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_btn_gradient_rounded_corner_rect_new1"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/gray"
+                        android:background="@drawable/ic_btn_gradient_rounded_corner_rect_new1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvTopSurveys"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dim_45"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_survey_selected"
+                            android:fontFamily="@font/noto_extra_bold"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="@dimen/dim_15"
+                            android:paddingRight="@dimen/dim_15"
+                            android:text="Top Surveys"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_16" />
+
+                        <TextView
+                            android:id="@+id/tvTopOffers"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dim_45"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/noto_extra_bold"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="@dimen/dim_15"
+                            android:paddingRight="@dimen/dim_15"
+                            android:text="Top Offers"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textSize_16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutSurveys"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtNoSurvey"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim_60"
+                            android:fontFamily="@font/noto_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="@dimen/dim_15"
+                            android:paddingRight="@dimen/dim_15"
+                            android:text="Loading Surveys..."
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textSize_16" />
+
+                        <LinearLayout
+                            android:id="@+id/layoutSurveyList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvSeeSurveyHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dim_32"
+                            android:layout_gravity="right"
+                            android:layout_marginBottom="@dimen/dim_5"
+                            android:fontFamily="@font/noto_extra_bold"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="@dimen/dim_15"
+                            android:paddingRight="@dimen/dim_15"
+                            android:text="See History>>"
+                            android:textAllCaps="false"
+                            android:textColor="#808080"
+                            android:textSize="@dimen/textSize_15" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTopOffers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_5"
+                        android:layout_marginTop="@dimen/dim_15"
+                        android:layout_marginRight="@dimen/dim_15"
+                        android:layout_marginBottom="@dimen/dim_10"
+                        android:orientation="horizontal"
+                        android:scrollbarSize="@dimen/dim_3"
+                        android:scrollbars="none"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/raw_top_offers" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+</LinearLayout>

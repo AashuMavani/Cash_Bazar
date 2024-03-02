@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/dialog_header_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="@dimen/dim_20"
+            android:text="Earn money when a friend joins PocketEarn &amp; performs:"
+            android:textColor="@color/black_font"
+            android:textSize="@dimen/textSize_16" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTitle"
+            android:layout_marginLeft="@dimen/dim_15"
+            android:layout_marginRight="@dimen/dim_15"
+            android:layout_marginBottom="@dimen/dim_15" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rvRules"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginBottom="@dimen/dim_10">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnInvite"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/dim_45"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/selector_button_gradient"
+                android:elevation="@dimen/dim_2"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Refer &amp; Earn Now"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize_15" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

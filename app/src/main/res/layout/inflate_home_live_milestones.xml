@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relSlider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginEnd="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:visibility="visible"
+        app:cardBackgroundColor="#2BC998"
+        app:cardCornerRadius="@dimen/dim_10"
+        app:cardElevation="@dimen/dim_2">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/dim_10"
+            app:cardElevation="@dimen/dim_2">
+
+
+            <LinearLayout
+                android:id="@+id/layoutContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_15"
+                        android:layout_marginEnd="@dimen/dim_15"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_5sdp">
+
+                            <TextView
+                                android:id="@+id/lblTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/noto_extra_bold"
+                                android:gravity="left"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0.01"
+                                android:lineSpacingExtra="@dimen/dim_1"
+                                android:lineSpacingMultiplier="1.2"
+                                android:text="15 Days login challenge"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black_font"
+                                android:textSize="@dimen/textSize_15" />
+
+                            <TextView
+                                android:id="@+id/tvLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginLeft="@dimen/dim_10"
+                                android:background="@drawable/bg_label_red"
+                                android:backgroundTint="@color/red"
+                                android:elevation="@dimen/dim_2"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/noto_extra_bold"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:maxLines="1"
+                                android:paddingLeft="@dimen/dim_8"
+                                android:paddingTop="@dimen/dim_2"
+                                android:paddingRight="@dimen/dim_8"
+                                android:paddingBottom="@dimen/dim_2"
+                                android:text="Live"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize_12" />
+
+                            <TextView
+                                android:id="@+id/tvshowmilestonelist"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:fontFamily="@font/noto_extra_bold"
+                                android:gravity="right"
+                                android:includeFontPadding="false"
+                                android:text="Milestone List>>"
+                                android:textAllCaps="false"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/textSize_15" />
+
+<!--                            7BAF7B-->
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblSubTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_regular"
+                            android:gravity="left"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.01"
+                            android:lineSpacingExtra="@dimen/dim_1"
+                            android:lineSpacingMultiplier="1.2"
+                            android:paddingTop="@dimen/dim_5"
+                            android:text="(Use mWin everyday &amp; claim FREE points)"
+                            android:textAllCaps="false"
+                            android:textColor="@color/grey_font"
+                            android:visibility="visible"
+                            android:textSize="@dimen/textSize_13" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_10"
+                    android:layout_marginTop="@dimen/dim_5"
+                    android:layout_marginEnd="@dimen/dim_15"
+                    android:layout_marginBottom="@dimen/dim_5"
+                    android:orientation="horizontal"
+                    android:scrollbarSize="@dimen/dim_3"
+                    android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_live_milestones" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

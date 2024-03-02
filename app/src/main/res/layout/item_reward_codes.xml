@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginRight="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:elevation="@dimen/dim_2"
+        app:cardBackgroundColor="@color/white"
+        android:background="@drawable/ic_btn_gradient_rounded_corner_rect_new1"
+        app:cardCornerRadius="@dimen/dim_10">
+
+    <LinearLayout
+        android:id="@+id/layoutParentBorder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dim_10"
+        android:background="@drawable/ic_btn_gradient_rounded_corner_rect_new1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_5"
+            android:elevation="@dimen/dim_2"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dim_15"
+            android:paddingRight="@dimen/dim_15"
+            android:paddingTop="@dimen/dim_10"
+            android:paddingBottom="@dimen/dim_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/layoutIcon"
+                    android:layout_width="@dimen/dim_45"
+                    android:layout_height="@dimen/dim_45"
+                    android:background="@drawable/rectangle_white"
+                    android:gravity="center">
+
+                    <ProgressBar
+                        android:id="@+id/probr"
+                        android:layout_width="@dimen/dim_25"
+                        android:layout_height="@dimen/dim_25"
+                        android:layout_centerInParent="true"
+                        android:theme="@style/Progressbar.Green" />
+
+                    <ImageView
+                        android:id="@+id/ivIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="@dimen/dim_2" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/ivLottie"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dim_10"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/rubik_bold"
+                        android:gravity="left"
+                        android:includeFontPadding="false"
+                        android:maxLines="2"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_5"
+                        android:fontFamily="@font/rubik_medium"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/grey_font"
+                        android:textSize="@dimen/textSize_12"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutTransaction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_medium"
+                            android:includeFontPadding="false"
+                            android:text="Code:"
+                            android:textColor="@color/grey_font"
+                            android:textSize="@dimen/textSize_14" />
+
+                        <TextView
+                            android:id="@+id/tvCouponCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_5"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/rubik_bold"
+                            android:gravity="left"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.02"
+                            android:maxLines="1"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/textSize_15" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.widget.Button
+                    android:id="@+id/btnCopy"
+                    android:layout_width="@dimen/dim_70"
+                    android:layout_height="@dimen/dim_30"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dim_10"
+                    android:background="@drawable/bg_highlight_task_red_color"
+                    android:clickable="false"
+                    android:elevation="@dimen/dim_2"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="Copy"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/textSize_15" />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <android.widget.Button
+            android:id="@+id/btnCompleteTask"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_34"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimary"
+            android:clickable="false"
+            android:elevation="@dimen/dim_2"
+            android:ellipsize="end"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/noto_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dim_10"
+            android:paddingRight="@dimen/dim_10"
+            android:text="Copy"
+            android:textAllCaps="false"
+            android:textColor="@color/selector_button"
+            android:textSize="@dimen/textSize_15" />
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <FrameLayout
+        android:id="@+id/fl_adplaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:layout_marginTop="@dimen/dim_5"
+        android:layout_marginRight="@dimen/dim_15"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:background="@drawable/rectangle_white"
+        android:elevation="@dimen/dim_2"
+        android:visibility="gone" />
+
+</LinearLayout>
